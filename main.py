@@ -27,10 +27,12 @@ def display_main_menu():
     print('|                 ( E )                |')
     print(' ======================================')
 
-def display_lesson5_menu():
+def display_lesson4_menu():
     print(' ======================================================')
     print('|                    LESSON 4 CODES                    |')
     print(' ======================================================')
+    # pakikumpleto itong menu para sa lesson 4
+    # bale dapat 9 ang nandito kasi 9 yung questions sa lesson 4
 
 def switch_for_lesson5(choice):
     if choice == 1:
