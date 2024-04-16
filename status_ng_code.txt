@@ -1,0 +1,33 @@
+Pakibasa ito para malaman kung ano yung current status ng case study. Para malaman kung
+ano yung mga dapat pang idagdag or ano yung mga di gumagana.
+
+
+Current Status:
+
+    First of all, nailagay na lahat ng codes sa Lesson 5. At gumagana na rin yung main menu. Try
+    niyo i-run yung code, gumagana na yan pero for Lesson 5 pa lang since hindi pa nailalagay yung
+    codes sa Lesson 4.
+
+
+Mga Dapat Baguhin:
+
+    1. If want niyo baguhin yung hitsura ng main menu pati yung menu for Lesson 4 at Lesson 5, do so.
+    As long as mas maganda ilalagay niyo hahaha.
+
+    2. And yung mga codes sa Lesson 4, dapat modularized. Meaning dapat naka-group into methods or classes.
+
+
+Mga Dapat Alisin:
+
+    So far wala pa namang dapat alisin.
+
+
+Mga Dapat Idagdag:
+
+    Ito yung mga dapat idagdag na wala pa diyan sa case study:
+    1. Mga codes sa Lesson 4
+    2. Menu para sa Lesson 4
+    3. Pag-import ng mga codes sa Lesson 4
+
+
+NOTE: Paki-update itong file na ito every time na may gusto kayong i-note para mabasa ng bawat isa...
