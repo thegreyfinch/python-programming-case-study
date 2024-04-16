@@ -75,6 +75,7 @@ class Program:
         my_obj.get_input_for_k()
         my_obj.display_divisible_tuples()
 
-program = Program()
-program.main()
+if __name__ == "__main__":
+    program = Program()
+    program.main()
 

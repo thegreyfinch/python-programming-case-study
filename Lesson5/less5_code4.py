@@ -90,6 +90,6 @@ class Program:
         my_obj.display_products()
         my_obj.display_price_per_product()
 
-program = Program()
-program.main()
-
+if __name__ == "__main__":
+    program = Program()
+    program.main()

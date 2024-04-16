@@ -64,6 +64,6 @@ class Program:
         log_in.get_user_input()
         log_in.validate_username()
 
-program = Program()
-program.main()
-
+if __name__ == "__main__":
+    program = Program()
+    program.main()

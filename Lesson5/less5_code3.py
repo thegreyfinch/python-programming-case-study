@@ -92,7 +92,6 @@ class Program:
         my_obj.display_months_with_31_days()
         my_obj.display_items_sorted_by_days()
 
-# create instance of Program class
-program = Program()
-program.main()
-
+if __name__ == "__main__":
+    program = Program()
+    program.main()
