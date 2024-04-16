@@ -74,14 +74,17 @@ class Products:
                     print(f'\nThe price of {prod_name} is {prod_price}')
                 # else, if the user input for prod_name does not exist in the dictionary, return KeyError then ask for user input again
                 else:
-                    raise KeyError('Error: Invalid input! Please enter a valid product name...')
+                    raise KeyError('\nError: Invalid input! Please enter a valid product name...')
                 # ask the user for another product name input
-                ans = input('Do you want to get the price of another product? (y / n): \n')
+                ans = input('\nDo you want to get the price of another product? (y / n): ')
                 answer = ans.lower()
                 if answer == 'n':
                     break
             except KeyError as ke:
                 print(ke)
+    
+    def go_back_to_lesson5_menu(self):
+        input('\nPress any key to go back to the Lesson 5 menu...')
 
 class Program:
     def main(self):
@@ -89,6 +92,7 @@ class Program:
         my_obj.get_input_for_prod_info()
         my_obj.display_products()
         my_obj.display_price_per_product()
+        my_obj.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()

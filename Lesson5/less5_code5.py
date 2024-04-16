@@ -57,12 +57,16 @@ class LogIn:
     def display_successful_log_in(self):
         print('') # newline purposes
         print('\n You have successfully logged in to the system!')
+    
+    def go_back_to_lesson5_menu(self):
+        input('\n Press any key to go back to the Lesson 5 menu...')
 
 class Program:
     def main(self):
         log_in = LogIn()
         log_in.get_user_input()
         log_in.validate_username()
+        log_in.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()

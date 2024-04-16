@@ -82,6 +82,8 @@ class DaysPerMonth:
         print('\nDAYS PER MONTH (Sorted by Days): ')
         print(self.sorted_items)
 
+    def go_back_to_lesson5_menu(self):
+        input('\nPress any key to go back to the Lesson 5 menu...')
 
 class Program:
     def main(self):
@@ -91,6 +93,7 @@ class Program:
         my_obj.sort_month_name()
         my_obj.display_months_with_31_days()
         my_obj.display_items_sorted_by_days()
+        my_obj.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()

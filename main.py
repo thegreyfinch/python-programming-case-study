@@ -34,15 +34,20 @@ def display_lesson5_menu():
 
 def switch_for_lesson5(choice):
     if choice == 1:
-        less5_code1.main(return_to_menu=display_lesson5_menu)  # call the first code in lesson 5 if user's choice is 1
+        clear_console()
+        less5_code1.main()  # call the first code in lesson 5 if user's choice is 1
     elif choice == 2:
-        less5_code2.main(return_to_menu=display_lesson5_menu)  # call the second code in lesson 5 if user's choice is 2
+        clear_console()
+        less5_code2.Program().main()  # call the second code in lesson 5 if user's choice is 2
     elif choice == 3:
-        less5_code3.main(return_to_menu=display_lesson5_menu)  # call the third code in lesson 5 if user's choice is 3
+        clear_console()
+        less5_code3.Program().main()  # call the third code in lesson 5 if user's choice is 3
     elif choice == 4:
-        less5_code4.main(return_to_menu=display_lesson5_menu)  # call the fourth code in lesson 5 if user's choice is 4
+        clear_console()
+        less5_code4.Program().main()  # call the fourth code in lesson 5 if user's choice is 4
     elif choice == 5:
-        less5_code5.main(return_to_menu=display_lesson5_menu)  # call the fifth code in lesson 5 if user's choice is 5
+        clear_console()
+        less5_code5.Program().main()  # call the fifth code in lesson 5 if user's choice is 5
     else:
         print('\nError: Invalid input! Please enter a valid option!')
 
@@ -60,11 +65,11 @@ def display_lesson5_menu():
         print('| 6. Go back to the main menu                          |')
         print(' ======================================================')
         ch = input('Enter choice here: ')
-        choice = ch.upper()
+        choice = int(ch)
         # validate the user input for choice
         # if the user input for choice is between 1 and 5, call the method that will perform the switch-case-like method
         if choice in range(1, 6):
-            switch_for_lesson5(int(choice))
+            switch_for_lesson5(choice)
         elif choice == 6: # if user input for choice is 6, go back to the main menu using break
             break 
         # else, print error message then ask for user input again
@@ -72,8 +77,8 @@ def display_lesson5_menu():
             print('\nError: Invalid input! Please enter a valid choice...')
 
 def main():
+    intro() # not sure if sa labas or sa loob ito dapat
     while True:
-        intro()
         display_main_menu()
         ch = input('Enter choice here: ')
         choice = ch.upper()

@@ -66,6 +66,9 @@ class ListOfTuple:
             if self.is_divisible_by_k(tup):
                 print(tup, end = ' ')
         print()
+    
+    def go_back_to_lesson5_menu(self):
+        input('\nPress any key to go back to the Lesson 5 menu...')
 
 class Program:
     def main(self):
@@ -74,6 +77,7 @@ class Program:
         my_obj.display_list_of_tup()
         my_obj.get_input_for_k()
         my_obj.display_divisible_tuples()
+        my_obj.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()
