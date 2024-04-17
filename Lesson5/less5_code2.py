@@ -4,7 +4,7 @@ Problem:
     Ask also for another integer value and assign it to K. 
     Output the tuple that are divisible by K.
 '''
-
+VARGAS:
 class ListOfTuple:
     def __init__(self):
         self.K = None
@@ -82,4 +82,35 @@ class Program:
 if __name__ == "__main__":
     program = Program()
     program.main()
+
+SOLANO:
+def filter_tuples_by_divisibility(tuples_list, k):
+    # Filter tuples in the list where both elements are divisible by k
+    return [tup for tup in tuples_list if tup[0] % k == 0 and tup[1] % k == 0]
+def input_tuples():
+    tuples_list = []
+    while True:
+        try:
+            # Ask the user to input a tuple of integers separated by commas
+            tuple_input = input("Enter a tuple of integers separated by a comma (or type 'done' to finish): ")
+            if tuple_input.lower() == 'done':
+                break
+            # Convert the input string into a tuple of integers and append it to the list
+            tuple_values = tuple(map(int, tuple_input.split(',')))
+            tuples_list.append(tuple_values)
+        except ValueError:
+            print("Invalid input. Please enter integers separated by commas.")
+    return tuples_list
+
+def main():
+    # Ask the user to input a list of integer tuples
+    tuples_list = input_tuples()
+    # Ask the user to input an integer value for k
+    k = int(input("Enter an integer value for K: "))
+    # Filter tuples divisible by k and print the result
+    divisible_tuples = filter_tuples_by_divisibility(tuples_list, k)
+    print("Tuples divisible by", k, ":", divisible_tuples)
+
+# Call the main function to run the program
+main()
 
