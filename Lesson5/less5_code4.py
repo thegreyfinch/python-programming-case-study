@@ -138,32 +138,31 @@ main()
 
 MARIAL:
 
-def marialProductPrice:
-    # PRODUCTS PRESETS
-    # products = {
-    #     "apple": 100,
-    #     "banana": 50,
-    #     "orange": 125,
-    #     "grapes": 200,
-    #     "watermelon": 300,
-    #     "strawberry": 140,
-    #     "blueberry": 225,
-    #     "pineapple": 165,
-    #     "kiwi": 75,
-    #     "mango": 150,
-    #     "peach": 110,
-    #     "pear": 85,
-    #     "plum": 90,
-    #     "raspberry": 200,
-    #     "blackberry": 215,
-    #     "lemon": 40,
-    #     "lime": 35,
-    #     "coconut": 150,
-    #     "avocado": 100
-    # }
+# PRODUCTS PRESETS
+# products = {
+#     "apple": 100,
+#     "banana": 50,
+#     "orange": 125,
+#     "grapes": 200,
+#     "watermelon": 300,
+#     "strawberry": 140,
+#     "blueberry": 225,
+#     "pineapple": 165,
+#     "kiwi": 75,
+#     "mango": 150,
+#     "peach": 110,
+#     "pear": 85,
+#     "plum": 90,
+#     "raspberry": 200,
+#     "blackberry": 215,
+#     "lemon": 40,
+#     "lime": 35,
+#     "coconut": 150,
+#     "avocado": 100
+# }
     
+def add_products():
     products = {}
-    
     print("Enter the product names and prices. Enter 'done' to stop entering products")
     while True:
         product_name = input("\nEnter the product name: ")
@@ -171,14 +170,22 @@ def marialProductPrice:
             break
         product_price = float(input("Enter the product price: "))
         products[product_name] = product_price
-    
+    return products
+
+def get_product_price(products_dict):
     while True:
         product_name = input("\nEnter the product name to get the price: ")
         if product_name.lower() == 'done':
             break
-        if product_name in products:
-            print(f"The price of {product_name} is {products[product_name]}")
+        if product_name in products_dict:
+            print(f"The price of {product_name} is {products_dict[product_name]}")
         else:
             print(f"{product_name} is not found in the dictionary")
-    
-    print(products)
+
+def main():
+    products = add_products()
+    get_product_price(products)
+
+if __name__ == "__main__":
+    main()
+
