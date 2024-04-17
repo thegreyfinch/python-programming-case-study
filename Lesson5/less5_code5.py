@@ -120,3 +120,30 @@ def main():
         else:
             print("Invalid choice. Please enter '1' or '2'.")
 main()
+
+MARIAL:
+
+
+def marialUserAuthentication:
+    user_credentials = {
+        'erice_marial': 'marsulala123',
+        'angie_lee': 'angie123',
+        'james_bond': 'bond007',
+        'tony_stark': 'ironman',
+        'john_wick': 'wick123',
+        'bruce_wayne': 'batman',
+        'clark_kent': 'superman',
+        'diana_prince': 'wonderwoman',
+        'peter_parker': 'spiderman',
+        'barry_allen': 'flash'
+    }
+    print("Welcome to the login system!\n")
+    username_input = input("Enter your username: ")
+    if username_input in user_credentials:
+        password_input = input("Enter your password: ")
+        if password_input == user_credentials[username_input]:
+            print(f"\nWelcome {username_input}! You are now logged in to the system")
+        else:
+            print("\nInvalid password!")
+    else:
+        print("\nYou are not a valid user of the system!")
