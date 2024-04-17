@@ -6,7 +6,7 @@ Problem:
     but the user does not enter the right password, the program should say that the password is invalid. 
     If the password is correct, then the program should tell the user that they are now logged in to the system.
 '''
-
+VARGAS:
 class LogIn:
     def __init__(self):
         self.user_credentials = {
@@ -71,3 +71,52 @@ class Program:
 if __name__ == "__main__":
     program = Program()
     program.main()
+
+SOLANO:
+def login(users):
+    username = input("Enter your username: ")
+   
+    # Check if the username exists in the dictionary
+    if username in users:
+        password = input("Enter your password: ")
+        
+        # Check if the entered password matches the password associated with the username
+        if users[username] == password:
+            print("Login successful! Welcome, {}!".format(username))
+        else:
+            print("Invalid password.")
+    else:
+        print("User '{}' not found. You are not a valid user of the system.".format(username))
+
+def create_account(users):
+    new_username = input("Enter a new username: ")
+    new_password = input("Enter a new password: ")
+    users[new_username] = new_password
+    print("Account created successfully!")
+
+def main():
+    # Dictionary containing user names as keys and passwords as values
+    users = {
+        "user1": "password1",
+        "user2": "password2",
+        "user3": "password3",
+        "user4": "password4",
+        "user5": "password5",
+        "user6": "password6",
+        "user7": "password7",
+        "user8": "password8",
+        "user9": "password9",
+        "user10": "password10"
+    }
+    
+    # Prompt the user to create a new account or log in with existing credentials
+    while True:
+        choice = input("Enter '1' to create a new account or '2' to log in: ")
+        if choice == '1':
+            create_account(users)
+        elif choice == '2':
+            login(users)
+            break
+        else:
+            print("Invalid choice. Please enter '1' or '2'.")
+main()
