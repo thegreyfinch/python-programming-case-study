@@ -144,43 +144,42 @@ main()
 
 MARIAL:
 
-def marialMonthDay:
-    # def main:
-    months_days = {'January':31,
-            'February':28,
-            'March':31,
-            'April':30,
-            'May':31, 
-            'June':30,
-            'July':31,
-            'August':31,
-            'September':30,
-            'October':31,
-            'November':30,
-            'December':31
-    }    
-    
-    # def monthSearch:
-    month = input("Enter the a month name: ").capitalize()
-    
-    if month in months_days:
-        print(f"{month} has {months_days[month]} days")
+def search_month(months_dict):
+    month_input = input("Enter a month name: ").capitalize()
+    if month_input in months_dict:
+        print(f"{month_input} has {months_dict[month_input]} days")
     else:
-        print(f"{month} is not found in the dictionary")
-    
-    # def monthSort:
-    months_sort = sorted(months_days.keys())
-    print(f"\nMonths in alphabetical order:")
-    for i in months_sort:
-        print(i)
-    
-    # def monthWTODays:
-    print(f"\nMonths with 31 days:")
-    for i in months_days:
-        if months_days[i] == 31:
-            print(i)
-    
-    # def keyValuePair:
+        print(f"{month_input} is not found in the dictionary")
+
+def print_months_alphabetical(months_dict):
+    months_sort = sorted(months_dict.keys())
+    print("\nMonths in alphabetical order:")
+    for month in months_sort:
+        print(month)
+
+def print_months_with_31_days(months_dict):
+    print("\nMonths with 31 days:")
+    for month, days in months_dict.items():
+        if days == 31:
+            print(month)
+
+def print_sorted_key_value_pairs(months_dict):
     print("\nKey-Value pairs sorted by the number of days:")
-    for i in sorted(months_days.items(), key = lambda x: x[1]):
-        print(f"{i[0]} => {i[1]}")
+    for month, days in sorted(months_dict.items(), key=lambda x: x[1]):
+        print(f"{month} => {days}")
+
+# Main function
+def main():
+    months_days = {
+        'January': 31, 'February': 28, 'March': 31, 'April': 30, 'May': 31, 'June': 30,
+        'July': 31, 'August': 31, 'September': 30, 'October': 31, 'November': 30, 'December': 31
+    }
+
+    search_month(months_days)
+    print_months_alphabetical(months_days)
+    print_months_with_31_days(months_days)
+    print_sorted_key_value_pairs(months_days)
+
+# Call the main function to execute the program
+if __name__ == "__main__":
+    main()
