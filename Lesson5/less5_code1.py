@@ -36,3 +36,12 @@ result = create_tuples_list(input_list)
 print("Input:", input_list)
 print("Output:", result)
 
+
+MARIAL:
+
+def marialCreateListTuple:
+    list = [1, 2, 3]
+    list_of_tup =  []
+    for i in list:
+        list_of_tup.append((i, i ** 2))
+    print(f"List of Tuples => {list_of_tup}")
