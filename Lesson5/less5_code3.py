@@ -140,3 +140,47 @@ def main():
     print_sorted_key_value_pairs()
 # Call the main function to start the program
 main()
+
+
+MARIAL:
+
+def marialMonthDay:
+    # def main:
+    months_days = {'January':31,
+            'February':28,
+            'March':31,
+            'April':30,
+            'May':31, 
+            'June':30,
+            'July':31,
+            'August':31,
+            'September':30,
+            'October':31,
+            'November':30,
+            'December':31
+    }    
+    
+    # def monthSearch:
+    month = input("Enter the a month name: ").capitalize()
+    
+    if month in months_days:
+        print(f"{month} has {months_days[month]} days")
+    else:
+        print(f"{month} is not found in the dictionary")
+    
+    # def monthSort:
+    months_sort = sorted(months_days.keys())
+    print(f"\nMonths in alphabetical order:")
+    for i in months_sort:
+        print(i)
+    
+    # def monthWTODays:
+    print(f"\nMonths with 31 days:")
+    for i in months_days:
+        if months_days[i] == 31:
+            print(i)
+    
+    # def keyValuePair:
+    print("\nKey-Value pairs sorted by the number of days:")
+    for i in sorted(months_days.items(), key = lambda x: x[1]):
+        print(f"{i[0]} => {i[1]}")
