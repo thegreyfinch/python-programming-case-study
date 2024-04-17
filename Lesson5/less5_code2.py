@@ -114,3 +114,40 @@ def main():
 # Call the main function to run the program
 main()
 
+MARIAL:
+def marialDivisibleInt:
+    list_of_tup = []
+
+    number_of_tuples = int(input("Enter the number of tuples you want to input: "))
+    for i in range(number_of_tuples):
+        number_of_elements = int(input(f"\nEnter the number of elements in tuple {i + 1}: "))
+        tuple_elements = []
+        for j in range(number_of_elements):
+            element = int(input(f"Enter #{j + 1} element of tuple #{i + 1}: "))
+            tuple_elements.append(element)
+        list_of_tup.append(tuple(tuple_elements))
+    
+    k = int(input("\nEnter the an integer: "))
+    div_by_k = []
+    
+    # All elements should be divisible by k
+    for i in list_of_tup:
+        for j in i:
+            if j % k == 0:
+                print(f"\nTuple {i} is divisible by {k}")
+                div_by_k.append(i)
+                break
+        else:
+            continue
+        break
+    
+    # At least one element should be divisible by k
+    for i in list_of_tup:
+        for j in i:
+            if j % k == 0:
+                print(f"\nTuple divisible by {k} => {i}")
+                div_by_k.append(i)
+                break
+    
+    print(f"\n\nList of Tuples => {list_of_tup}")
+    print(f"\nTuples divisible by {k} => {div_by_k}")
