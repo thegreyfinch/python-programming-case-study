@@ -9,7 +9,7 @@ Problem:
     c. Print out all of the months with 31 days. 
     d. Print out the (key-value) pairs sorted by the number of days in each month
 '''
-
+VARGAS:
 class DaysPerMonth:
     # initialize the properties inside the __init__()
     def __init__(self):
@@ -98,3 +98,45 @@ class Program:
 if __name__ == "__main__":
     program = Program()
     program.main()
+
+SOLANO:
+# Dictionary of days in each month
+days = {'January': 31, 'February': 28, 'March': 31, 'April': 30, 'May': 31, 'June': 30,
+        'July': 31, 'August': 31, 'September': 30, 'October': 31, 'November': 30, 'December': 31}
+
+# Ask the user to enter a month name and output the number of days in that month
+def get_days_in_month(month_name):
+    if month_name in days:
+        print(f"There are {days[month_name]} days in {month_name}.")
+    else:
+        print("Invalid month name entered.")
+
+# Print all keys in alphabetical order
+def print_keys_in_alphabetical_order():
+    print("Months in alphabetical order:")
+    for month in sorted(days.keys()):
+        print(month)
+
+# Print months with 31 days
+def print_months_with_31_days():
+    print("\nMonths with 31 days:")
+    for month, days_count in days.items():
+        if days_count == 31:
+            print(month)
+
+# Print (key-value) pairs sorted by the number of days
+def print_sorted_key_value_pairs():
+    print("\nMonths sorted by the number of days:")
+    sorted_months = sorted(days.items(), key=lambda x: x[1])
+    for month, days_count in sorted_months:
+        print(f"{month} - {days_count} days")
+
+# Main function
+def main():
+    month_name = input("Enter a month name: ")
+    get_days_in_month(month_name)
+    print_keys_in_alphabetical_order()
+    print_months_with_31_days()
+    print_sorted_key_value_pairs()
+# Call the main function to start the program
+main()
