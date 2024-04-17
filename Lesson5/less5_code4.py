@@ -134,3 +134,51 @@ def main():
 
 # Call the main function to run the program
 main()
+
+
+MARIAL:
+
+def marialProductPrice:
+    # PRODUCTS PRESETS
+    # products = {
+    #     "apple": 100,
+    #     "banana": 50,
+    #     "orange": 125,
+    #     "grapes": 200,
+    #     "watermelon": 300,
+    #     "strawberry": 140,
+    #     "blueberry": 225,
+    #     "pineapple": 165,
+    #     "kiwi": 75,
+    #     "mango": 150,
+    #     "peach": 110,
+    #     "pear": 85,
+    #     "plum": 90,
+    #     "raspberry": 200,
+    #     "blackberry": 215,
+    #     "lemon": 40,
+    #     "lime": 35,
+    #     "coconut": 150,
+    #     "avocado": 100
+    # }
+    
+    products = {}
+    
+    print("Enter the product names and prices. Enter 'done' to stop entering products")
+    while True:
+        product_name = input("\nEnter the product name: ")
+        if product_name.lower() == 'done':
+            break
+        product_price = float(input("Enter the product price: "))
+        products[product_name] = product_price
+    
+    while True:
+        product_name = input("\nEnter the product name to get the price: ")
+        if product_name.lower() == 'done':
+            break
+        if product_name in products:
+            print(f"The price of {product_name} is {products[product_name]}")
+        else:
+            print(f"{product_name} is not found in the dictionary")
+    
+    print(products)
