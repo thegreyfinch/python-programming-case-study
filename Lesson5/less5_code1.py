@@ -39,8 +39,8 @@ print("Output:", result)
 
 MARIAL:
 
-def marialCreateListTuple:
-    list = [1, 2, 3]
+def createListTuple:
+    list = [1, 2, 3]  # Can be converted to user-input type for flexibility
     list_of_tup =  []
     for i in list:
         list_of_tup.append((i, i ** 2))
