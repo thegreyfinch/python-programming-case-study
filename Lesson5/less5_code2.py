@@ -114,10 +114,11 @@ def main():
 # Call the main function to run the program
 main()
 
-MARIAL:
-def marialDivisibleInt:
-    list_of_tup = []
 
+MARIAL:
+
+def input_tuples():
+    list_of_tup = []
     number_of_tuples = int(input("Enter the number of tuples you want to input: "))
     for i in range(number_of_tuples):
         number_of_elements = int(input(f"\nEnter the number of elements in tuple {i + 1}: "))
@@ -126,28 +127,35 @@ def marialDivisibleInt:
             element = int(input(f"Enter #{j + 1} element of tuple #{i + 1}: "))
             tuple_elements.append(element)
         list_of_tup.append(tuple(tuple_elements))
-    
-    k = int(input("\nEnter the an integer: "))
-    div_by_k = []
-    
-    # All elements should be divisible by k
-    for i in list_of_tup:
-        for j in i:
-            if j % k == 0:
-                print(f"\nTuple {i} is divisible by {k}")
-                div_by_k.append(i)
+    return list_of_tup
+
+def all_divisible(tuples_list, k):
+    divisible_tuples = []
+    for tup in tuples_list:
+        all_divisible = True 
+        for element in tup:
+            if element % k != 0:
+                all_divisible = False
                 break
-        else:
-            continue
-        break
-    
-    # At least one element should be divisible by k
-    for i in list_of_tup:
-        for j in i:
-            if j % k == 0:
-                print(f"\nTuple divisible by {k} => {i}")
-                div_by_k.append(i)
+        if all_divisible:
+            divisible_tuples.append(tup)
+    return divisible_tuples
+
+def one_divisible(tuples_list, k):
+    divisible_tuples = []
+    for tup in tuples_list:
+        for element in tup:
+            if element % k == 0:
+                divisible_tuples.append(tup)
                 break
-    
+# Main function
+def main():
+    list_of_tup = input_tuples()
+    k = int(input("\nEnter an integer to check divisibility: "))
+    divisible_tuples = all_divisible(list_of_tup, k)                #one_divisible(list_of_tup, k)
     print(f"\n\nList of Tuples => {list_of_tup}")
-    print(f"\nTuples divisible by {k} => {div_by_k}")
+    print(f"\nTuples divisible by {k} => {divisible_tuples}")
+
+# Call the main function to execute the program
+if __name__ == "__main__":
+    main()
