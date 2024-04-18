@@ -87,3 +87,37 @@ def main():
 
 # Call the main function directly
 main()
+
+
+# ALOVEROS:
+
+def user_size_input():
+    user_input_size = int(input("Please enter the size of the list: "))
+    counter = 0
+    list = []
+    while counter != user_input_size:
+        user_input = input(f"Enter an integer:")
+        if user_input.isdigit():
+            list.append(int(user_input))
+            counter = counter + 1
+        else:
+            print("\"The input is not an integer, please try again\"")
+    return user_input_size, list
+
+
+size, list = user_size_input()
+print(f"The sum of the list is: {sum(list)}")
+print(f"The last item of the list is: {list[size-1]}")
+print(f"Reverse order of the list: {list[::-1]}")
+if 5 in list:
+    print("Yes")
+else:
+    print("No")
+print("Elements less than 5: ", end='')
+for x in range(size):
+    if list[x] < 5:
+        print(f"{list[x]} ", end='')
+print("")
+list = list[1:-1]
+list.sort()
+print("Sorted list(when first and last element are removed): ", list)
