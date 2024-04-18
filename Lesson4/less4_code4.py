@@ -47,3 +47,22 @@ list.sort()
 list.extend(list)
 list.insert(3,25)
 print("Final list:",list)
+
+
+# SINDAY
+my_list = [8, 9, 10]
+
+my_list[1] = 17
+
+my_list.extend([4, 5, 6])
+
+my_list.pop(0)
+
+my_list.sort()
+
+my_list *= 2
+
+my_list.insert(3, 25)
+
+# Print the final list
+print("The final list:", my_list)

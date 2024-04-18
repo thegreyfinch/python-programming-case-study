@@ -69,3 +69,26 @@ count_67 = list.count(67)
 print("Number of Occurences of 67's in the list:", count_67)
 list.remove(67)
 list.pop(list.index(False))
+
+# SINDAY:
+
+my_list = [67, 62.9, "hi", False, 8, 67, 'apple', 6.5]
+
+my_list.append("banana")
+my_list.append(67)
+
+my_list.insert(3, "dog")
+
+my_list.insert(0, 909)
+
+hi_index = my_list.index("hi")
+
+count_67 = my_list.count(67)
+
+my_list.remove(67)
+
+false_index = my_list.index(False)
+my_list.pop(false_index)
+
+print(my_list)
+

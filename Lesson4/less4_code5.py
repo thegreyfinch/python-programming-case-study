@@ -57,3 +57,27 @@ def user_overcompensate(arr):
 list = []
 user_input, list = user_overcompensate(list)
 print(f"The list of factors of {user_input} are: {list}")
+
+
+# SINDAY:
+
+def find_factors(number):
+    factors = []
+    for i in range(1, number + 1):
+        if number % i == 0:
+            factors.append(i)
+    return factors
+
+# Ask the user for an integer
+try:
+    user_input = int(input("Enter an integer: "))
+    if user_input <= 0:
+        print("Please enter a positive integer.")
+    else:
+        # Create a list of factors
+        factors_list = find_factors(user_input)
+        
+        # Print the list of factors
+        print("The factors of", user_input, "are:", factors_list)
+except ValueError:
+    print("Please enter a valid integer.")

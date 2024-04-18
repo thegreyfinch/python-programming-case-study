@@ -58,3 +58,17 @@ print("x[1:4:2] =",i)
 print("x[:2] =",j)
 print("x[::2] =",k)
 print(f"x ={x}")
+
+# SINDAY:
+a. [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5] 
+b. [1, 2, 3, 4, 5, 11, 12, 13, 14, 15]
+c. [1, 2, 3, 4, 5] - [11, 12, 13, 14, 15] 
+d. 2
+e. 1
+f. 5
+g. [1, 2, 3, 4, 5]
+h. [3, 4]
+i. [2, 4]
+j. [1, 2]
+k. [1, 3, 5]
+l. The result of the expression `x[3]=8` assigns the value `8` to the e[1, 2, 3, 8, 5]`. Then, `print x` would output `[1, 2, 3, 8, 5]`.

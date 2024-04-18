@@ -121,3 +121,31 @@ print("")
 list = list[1:-1]
 list.sort()
 print("Sorted list(when first and last element are removed): ", list)
+
+
+# SINDAY:
+
+size = int(input("Enter the size of the list: "))
+
+input_list = []
+for i in range(size):
+    num = int(input("Enter an integer: "))
+    input_list.append(num)
+
+print("Sum of items in the list:", sum(input_list))
+
+print("Last item in the list:", input_list[-1])
+
+print("List in reverse order:", input_list[::-1])
+
+if 5 in input_list:
+    print("Yes")
+else:
+    print("No")
+
+count_less_than_5 = sum(1 for num in input_list if num < 5)
+print("Number of integers less than 5:", count_less_than_5)
+
+modified_list = input_list[1:-1]
+modified_list.sort()
+print("After removing first and last items and sorting:", modified_list)
