@@ -36,3 +36,14 @@ my_list.insert(3, 25)
 # Print the final list
 print("The final list:", my_list)
 
+# ALOVEROS:
+
+list = [8,9,10]
+print("Original List:",list)
+list [1] = 17
+list.extend ([4,5,6])
+list.pop(0)
+list.sort()
+list.extend(list)
+list.insert(3,25)
+print("Final list:",list)
