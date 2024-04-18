@@ -43,3 +43,17 @@ try:
         print("Factors of", num, "are:", factors)
 except ValueError:
     print("Invalid input! Please enter a valid integer.")
+
+# ALOVEROS:
+
+def user_overcompensate(arr):
+    user_input = int(input("Please Enter a number: "))
+    for x in range(1, user_input + 1):
+        if user_input % x == 0:
+            arr.append(x)
+    return user_input, arr
+
+
+list = []
+user_input, list = user_overcompensate(list)
+print(f"The list of factors of {user_input} are: {list}")
