@@ -1,3 +1,7 @@
+# convert the answers below into code
+
+# SOLANO:
+'''
 Define the variables x and y as lists of numbers 
 x=[1, 2, 3, 4, 5] 
 y=[11, 12, 13, 14, 15] 
@@ -16,4 +20,4 @@ K.	What is the value of x[::2]? - Value of x[::2]: [1, 3, 5]
 L.	What is the result of the following two expressions? 
 •	x[3]=8 - x[3]=8
 •	print x - print x: [1, 2, 3, 8, 5]
-
+'''

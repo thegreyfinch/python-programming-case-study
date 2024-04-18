@@ -1,34 +1,45 @@
-Start with the list [8,9,10]. Do the following: 
-A.	Set the second entry (index 1) to 17 
-B.	Add 4, 5, and 6 to the end of the list 
-C.	Remove the first entry from the list 
-D.	Sort the list 
-E.	Double the list 
-F.	Insert 25 at index 3 The final list should equal [4,5,6,25,10,17,4,5,6,10,17]
+'''
+Problem:
+    Write a program that asks the user for an integer and creates a list that consists of the factors of that integer
+'''
 
-# Start with the list [8, 9, 10]
-# Start with the list [8, 9, 10]
-my_list = [8, 9, 10]
-print("Original List:", my_list)
+# ESTANISLAO:
+# Ask the user for an integer
+num = int(input("Enter an integer: "))
 
-# A. Set the second entry (index 1) to 17
-my_list[1] = 17
+# Initialize an empty list to store factors
+factors = []
 
-# B. Add 4, 5, and 6 to the end of the list
-my_list.extend([4, 5, 6])
+# Iterate through numbers from 1 to the input number
+for i in range(1, num + 1):
+    # Check if the current number is a factor of the input number
+    if num % i == 0:
+        # If it is, add it to the list of factors
+        factors.append(i)
 
-# C. Remove the first entry from the list
-my_list.pop(0)
+# Print the list of factors
+print("Factors of", num, "are:", factors)
 
-# D. Sort the list
-my_list.sort()
 
-# E. Double the list
-my_list *= 2
+# SOLANO:
+# Function to find factors of a given number
+def find_factors(num):
+    factors = []
+    for i in range(1, num + 1):
+        if num % i == 0:
+            factors.append(i)
+    return factors
 
-# F. Insert 25 at index 3
-my_list.insert(3, 25)
-
-# Print the final list
-print("The final list:", my_list)
-
+# Ask the user for an integer
+try:
+    num = int(input("Enter an integer: "))
+    if num < 1:
+        print("Please enter a positive integer.")
+    else:
+        # Find factors of the given integer
+        factors = find_factors(num)
+        
+        # Print the list of factors
+        print("Factors of", num, "are:", factors)
+except ValueError:
+    print("Invalid input! Please enter a valid integer.")

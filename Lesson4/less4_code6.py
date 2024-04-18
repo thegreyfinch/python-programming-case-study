@@ -1,23 +1,26 @@
-Write a program that asks the user for an integer and creates a list that consists of the factors of that integer
+'''
+Problem: 
+    Write a program that removes any repeated items from a list so that each item appears at most once. 
+    For instance, the list [1,1,2,3,4,3,0,0] would become [1,2,3,4,0].
+'''
 
-# Function to find factors of a given number
-def find_factors(num):
-    factors = []
-    for i in range(1, num + 1):
-        if num % i == 0:
-            factors.append(i)
-    return factors
+# ESTANISLAO:
+# Ask the user for the number of elements in the list
+num_elements = int(input("Enter the number of elements: "))
 
-# Ask the user for an integer
-try:
-    num = int(input("Enter an integer: "))
-    if num < 1:
-        print("Please enter a positive integer.")
-    else:
-        # Find factors of the given integer
-        factors = find_factors(num)
-        
-        # Print the list of factors
-        print("Factors of", num, "are:", factors)
-except ValueError:
-    print("Invalid input! Please enter a valid integer.")
+# Initialize an empty list to store the elements
+my_list = []
+
+# Take input from the user for each element
+for i in range(num_elements):
+    my_list.append(int(input("Enter element {}: ".format(i + 1))))
+
+# Remove repeated items from the list
+unique_list = []
+for item in my_list:
+    if item not in unique_list:
+        unique_list.append(item)
+
+# Print the unique_list
+print("Original list:", my_list)
+print("List with repeated items removed:", unique_list)
