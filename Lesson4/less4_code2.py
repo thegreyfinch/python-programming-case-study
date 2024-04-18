@@ -45,3 +45,27 @@ my_list.pop(index_of_false)
 print("Modified list:", my_list)
 print("Index of 'hi':", index_of_hi)
 print("Count of 67s:", count_of_67)
+
+
+# ALOVEROS:
+
+list = []
+list.append(67)
+list.append(62.9)
+list.append("Hi")
+list.append(False)
+list = list + [8]
+list =list + [67]
+list = list + ["apple"]
+list = list + [6.5]
+list.append("banana")
+list.append(67)
+list.insert(3, "dog")
+list.insert(0, 909)
+print(list)
+index_hi = list.index("Hi")
+print("Index of 'Hi':", index_hi)
+count_67 = list.count(67)
+print("Number of Occurences of 67's in the list:", count_67)
+list.remove(67)
+list.pop(list.index(False))
