@@ -4,7 +4,9 @@ Problem:
     Ask also for another integer value and assign it to K. 
     Output the tuple that are divisible by K.
 '''
-VARGAS:
+
+# Final Source Code:
+
 class ListOfTuple:
     def __init__(self):
         self.K = None
@@ -82,80 +84,3 @@ class Program:
 if __name__ == "__main__":
     program = Program()
     program.main()
-
-SOLANO:
-def filter_tuples_by_divisibility(tuples_list, k):
-    # Filter tuples in the list where both elements are divisible by k
-    return [tup for tup in tuples_list if tup[0] % k == 0 and tup[1] % k == 0]
-def input_tuples():
-    tuples_list = []
-    while True:
-        try:
-            # Ask the user to input a tuple of integers separated by commas
-            tuple_input = input("Enter a tuple of integers separated by a comma (or type 'done' to finish): ")
-            if tuple_input.lower() == 'done':
-                break
-            # Convert the input string into a tuple of integers and append it to the list
-            tuple_values = tuple(map(int, tuple_input.split(',')))
-            tuples_list.append(tuple_values)
-        except ValueError:
-            print("Invalid input. Please enter integers separated by commas.")
-    return tuples_list
-
-def main():
-    # Ask the user to input a list of integer tuples
-    tuples_list = input_tuples()
-    # Ask the user to input an integer value for k
-    k = int(input("Enter an integer value for K: "))
-    # Filter tuples divisible by k and print the result
-    divisible_tuples = filter_tuples_by_divisibility(tuples_list, k)
-    print("Tuples divisible by", k, ":", divisible_tuples)
-
-# Call the main function to run the program
-main()
-
-
-MARIAL:
-
-def input_tuples():
-    list_of_tup = []
-    number_of_tuples = int(input("Enter the number of tuples you want to input: "))
-    for i in range(number_of_tuples):
-        number_of_elements = int(input(f"\nEnter the number of elements in tuple {i + 1}: "))
-        tuple_elements = []
-        for j in range(number_of_elements):
-            element = int(input(f"Enter #{j + 1} element of tuple #{i + 1}: "))
-            tuple_elements.append(element)
-        list_of_tup.append(tuple(tuple_elements))
-    return list_of_tup
-
-def all_divisible(tuples_list, k):
-    divisible_tuples = []
-    for tup in tuples_list:
-        all_divisible = True 
-        for element in tup:
-            if element % k != 0:
-                all_divisible = False
-                break
-        if all_divisible:
-            divisible_tuples.append(tup)
-    return divisible_tuples
-
-def one_divisible(tuples_list, k):
-    divisible_tuples = []
-    for tup in tuples_list:
-        for element in tup:
-            if element % k == 0:
-                divisible_tuples.append(tup)
-                break
-# Main function
-def main():
-    list_of_tup = input_tuples()
-    k = int(input("\nEnter an integer to check divisibility: "))
-    divisible_tuples = all_divisible(list_of_tup, k)                #one_divisible(list_of_tup, k)
-    print(f"\n\nList of Tuples => {list_of_tup}")
-    print(f"\nTuples divisible by {k} => {divisible_tuples}")
-
-# Call the main function to execute the program
-if __name__ == "__main__":
-    main()

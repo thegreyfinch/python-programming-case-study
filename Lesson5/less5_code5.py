@@ -6,7 +6,9 @@ Problem:
     but the user does not enter the right password, the program should say that the password is invalid. 
     If the password is correct, then the program should tell the user that they are now logged in to the system.
 '''
-VARGAS:
+
+# Final Source Code:
+
 class LogIn:
     def __init__(self):
         self.user_credentials = {
@@ -71,85 +73,3 @@ class Program:
 if __name__ == "__main__":
     program = Program()
     program.main()
-
-SOLANO:
-def login(users):
-    username = input("Enter your username: ")
-   
-    # Check if the username exists in the dictionary
-    if username in users:
-        password = input("Enter your password: ")
-        
-        # Check if the entered password matches the password associated with the username
-        if users[username] == password:
-            print("Login successful! Welcome, {}!".format(username))
-        else:
-            print("Invalid password.")
-    else:
-        print("User '{}' not found. You are not a valid user of the system.".format(username))
-
-def create_account(users):
-    new_username = input("Enter a new username: ")
-    new_password = input("Enter a new password: ")
-    users[new_username] = new_password
-    print("Account created successfully!")
-
-def main():
-    # Dictionary containing user names as keys and passwords as values
-    users = {
-        "user1": "password1",
-        "user2": "password2",
-        "user3": "password3",
-        "user4": "password4",
-        "user5": "password5",
-        "user6": "password6",
-        "user7": "password7",
-        "user8": "password8",
-        "user9": "password9",
-        "user10": "password10"
-    }
-    
-    # Prompt the user to create a new account or log in with existing credentials
-    while True:
-        choice = input("Enter '1' to create a new account or '2' to log in: ")
-        if choice == '1':
-            create_account(users)
-        elif choice == '2':
-            login(users)
-            break
-        else:
-            print("Invalid choice. Please enter '1' or '2'.")
-main()
-
-
-MARIAL:
-
-def login_system(credentials_dict):
-    print("Welcome to the login system!\n")
-    username_input = input("Enter your username: ")
-    if username_input in credentials_dict:
-        password_input = input("Enter your password: ")
-        if password_input == credentials_dict[username_input]:
-            print(f"\nWelcome {username_input}! You are now logged in to the system")
-        else:
-            print("\nInvalid password!")
-    else:
-        print("\nYou are not a valid user of the system!")
-
-def main():
-    user_credentials = {
-        'erice_marial': 'marsulala123',
-        'angie_lee': 'angie123',
-        'james_bond': 'bond007',
-        'tony_stark': 'ironman',
-        'john_wick': 'wick123',
-        'bruce_wayne': 'batman',
-        'clark_kent': 'superman',
-        'diana_prince': 'wonderwoman',
-        'peter_parker': 'spiderman',
-        'barry_allen': 'flash'
-    }
-    login_system(user_credentials)
-
-if __name__ == "__main__":
-    main()

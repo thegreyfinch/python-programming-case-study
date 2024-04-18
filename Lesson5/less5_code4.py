@@ -5,7 +5,9 @@ Problem:
     When the user is done entering products and prices, allow them to repeatedly enter a product name and 
     print the corresponding price or a message if the product is not in the dictionary. 
 '''
-VARGAS:
+
+# Final Source Code:
+
 class Products:
     def __init__(self):
         self.product_info = {} # dictionary that will contain product name and product price pair
@@ -22,7 +24,7 @@ class Products:
                     price = float(input('Enter the price of product: '))
                     break
                 except ValueError:
-                    print('Error: Invalid input! Please enter a number for the product price...\n')
+                    print("\nError: Invalid input! Please enter a number for the product price...\n")
             # add the name and price in the dictionary
             self.product_info.update({name: price}) # add in a dictionary form: inside curly braces and using colon
             # ask the user for another input, if 'n' stop getting input
@@ -74,7 +76,7 @@ class Products:
                     print(f'\nThe price of {prod_name} is {prod_price}')
                 # else, if the user input for prod_name does not exist in the dictionary, return KeyError then ask for user input again
                 else:
-                    raise KeyError('\nError: Invalid input! Please enter a valid product name...')
+                    raise KeyError("\nError: Invalid input! Please enter a valid product name...\n")
                 # ask the user for another product name input
                 ans = input('\nDo you want to get the price of another product? (y / n): ')
                 answer = ans.lower()
@@ -97,95 +99,3 @@ class Program:
 if __name__ == "__main__":
     program = Program()
     program.main()
-
-SOLANO:
-def add_products_to_dictionary():
-    # Initialize an empty dictionary to store product names and prices
-    products = {}
-    while True:
-        # Prompt the user to enter a product name or 'done' to finish
-        product_name = input("Enter product name (or type 'done' to finish): ")
-        if product_name.lower() == 'done':
-            break
-        # Prompt the user to enter the price of the product
-        product_price = float(input("Enter price for {}: $".format(product_name)))
-        # Add the product name and price to the dictionary
-        products[product_name] = product_price
-    return products
-
-def find_product_price(products):
-    while True:
-        # Prompt the user to enter a product name to find its price or 'quit' to exit
-        product_name = input("Enter a product name to find its price (or type 'quit' to exit): ")
-        if product_name.lower() == 'quit':
-            break
-        # Check if the product is in the dictionary
-        if product_name in products:
-            # Print the price of the product
-            print("Price of {}: ${}".format(product_name, products[product_name]))
-        else:
-            # Print a message if the product is not found
-            print("Product '{}' not found.".format(product_name))
-def main():
-    # Add products and their prices to the dictionary
-    products = add_products_to_dictionary()
-    # Find product prices based on user input
-    find_product_price(products)
-
-# Call the main function to run the program
-main()
-
-
-MARIAL:
-
-# PRODUCTS PRESETS
-# products = {
-#     "apple": 100,
-#     "banana": 50,
-#     "orange": 125,
-#     "grapes": 200,
-#     "watermelon": 300,
-#     "strawberry": 140,
-#     "blueberry": 225,
-#     "pineapple": 165,
-#     "kiwi": 75,
-#     "mango": 150,
-#     "peach": 110,
-#     "pear": 85,
-#     "plum": 90,
-#     "raspberry": 200,
-#     "blackberry": 215,
-#     "lemon": 40,
-#     "lime": 35,
-#     "coconut": 150,
-#     "avocado": 100
-# }
-    
-def add_products():
-    products = {}
-    print("Enter the product names and prices. Enter 'done' to stop entering products")
-    while True:
-        product_name = input("\nEnter the product name: ")
-        if product_name.lower() == 'done':
-            break
-        product_price = float(input("Enter the product price: "))
-        products[product_name] = product_price
-    return products
-
-def get_product_price(products_dict):
-    while True:
-        product_name = input("\nEnter the product name to get the price: ")
-        if product_name.lower() == 'done':
-            break
-        if product_name in products_dict:
-            print(f"The price of {product_name} is {products_dict[product_name]}")
-        else:
-            print(f"{product_name} is not found in the dictionary")
-
-def main():
-    products = add_products()
-    get_product_price(products)
-
-if __name__ == "__main__":
-    main()
-
