@@ -38,8 +38,8 @@ print("The final list:", my_list)
 
 # ALOVEROS:
 
-list = [8,9,10]
-print("Original List:",list)
+origlist = [8,9,10]
+print("Original List:",origlist)
 list [1] = 17
 list.extend ([4,5,6])
 list.pop(0)
