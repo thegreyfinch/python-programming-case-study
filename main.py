@@ -31,8 +31,16 @@ def display_lesson4_menu():
     print(' ======================================================')
     print('|                    LESSON 4 CODES                    |')
     print(' ======================================================')
-    # pakikumpleto itong menu para sa lesson 4
-    # bale dapat 9 ang nandito kasi 9 yung questions sa lesson 4
+    '''
+    Pakikumpleto itong menu para sa lesson 4. Bale dapat 6 ang nandito kasi 6 questions.
+    Ito yung mga possible na statements per number:
+    1. List Manipulation and Slicing
+    2. Adding, Finding Index, and Removing Items in the List
+    3. List Methods in Use: Append, Insert, Index, Count, Pop, and Remove
+    4. Change Value, Add, Remove, Sort and Perform Operation in the List
+    5. Factor List Generator: Create a List of Factors from User Input
+    6. Removing Repeated Items in the List
+    '''
 
 def switch_for_lesson5(choice):
     if choice == 1:
