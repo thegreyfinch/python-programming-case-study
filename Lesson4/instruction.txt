@@ -1,5 +1,0 @@
-Pakilagay lahat ng codes sa Lesson 4 sa folder na ito.
-Note: Paki-modularize yung codes sa Lesson 4. Meaning, dapat naka functions or classes.
-Para madali siyang maca-call sa main.py.
-
-Thanks!
