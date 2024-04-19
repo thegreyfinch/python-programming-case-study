@@ -1,6 +1,3 @@
-'''
-
-'''
 class ListCleaner:
     def __init__(self, original_list):
         self.original_list = original_list
