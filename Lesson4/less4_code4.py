@@ -30,6 +30,8 @@ class ListModifier:
     def insert_at_index(self, index, value):
         self.int_list.insert(index, value)
 
+    def go_back_to_lesson4_menu():
+        input('\nPress any key to go back to the Lesson 4 menu...') 
 
 class Program:
     @staticmethod
@@ -51,6 +53,7 @@ class Program:
         list_modifier.insert_at_index(3, 25)
         print(f"E. ] Insert 25 at index 3 : {list_modifier.int_list}")
 
+        list_modifier.go_back_to_lesson4_menu()
 
 if __name__ == "__main__":
     program = Program()
