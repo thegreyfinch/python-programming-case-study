@@ -1,3 +1,13 @@
+'''
+Write a program that asks the user to enter size of list and input a list of integers. Do the following:’ 
+a. Print the sum of items in the list. 
+b. Print the last item in the list. 
+c. Print the list in reverse order. 
+d. Print Yes if the list contains a 5 and No otherwise. 
+e. Print how many integers in the list are less than 5. 
+f. Remove the first and last items from the list, sort the remaining items, and print the result.
+'''
+
 class ListProcessor:
     def __init__(self):
         self.int_list = []
@@ -37,12 +47,12 @@ class Program:
         size = int(input("Enter the size of the list: "))
         list_processor.input_list(size)
 
-        print(f"\nSum : {list_processor.calculate_sum()}")
-        print(f"Last Item : {list_processor.get_last_item()}")
-        print(f"List in Reverse Order : {list_processor.reverse_list()}")
-        print(f"Does the list contains a five(5) ? {list_processor.contains_5()}")
-        print(f"There are {list_processor.count_less_than_5()} integers in the list that are less than 5")
-        print(f"Sorted list after removing first and last item : {list_processor.remove_sort()}")
+        print(f"\nA. ] Sum : {list_processor.calculate_sum()}")
+        print(f"B. ] Last Item : {list_processor.get_last_item()}")
+        print(f"C. ] List in Reverse Order : {list_processor.reverse_list()}")
+        print(f"D. ] Does the list contains a five(5) ? {list_processor.contains_5()}")
+        print(f"E. ] There are {list_processor.count_less_than_5()} integers in the list that are less than 5")
+        print(f"F. ] Sorted list after removing first and last item : {list_processor.remove_sort()}")
 
 
 if __name__ == "__main__":
