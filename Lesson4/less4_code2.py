@@ -1,21 +1,30 @@
-'''
-Create a list with the following six items: 67, 62.9, “hi”, False, 8, 67, ‘apple’, 6.5.
- Begin with the empty list shown below, and add 8 statements to add each item, one per item.
- The first four statements should use the append method to append the item to the list,
- and the last four statements should use concatenation
-
- Starting with the list of the previous exercise, write Python statements to do the following: 
- a. Append “banana” and 67 to the list. 
- b. Insert the value “dog” at position 3. 
- c. Insert the value 909 at the start of the list. 
- d. Find the index of “hi”. 
- e. Count the number of 67s in the list. 
- f. Remove the first occurrence of 67 from the list. 
- g. Remove False from the list using pop and index
- '''
 class ListManipulator:
     def __init__(self):
         self.list_items = []
+    
+    def display_title_of_problem(self):
+        print('Title: Adding, Finding Index, and Removing Items in the List')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    Create a list with the following six items: 67, 62.9, “hi”, False, 8, 67, 'apple', 6.5.
+    Begin with the empty list shown below, and add 8 statements to add each item, one per item.
+    The first four statements should use the append method to append the item to the list,
+    and the last four statements should use concatenation
+
+    Starting with the list of the previous exercise, write Python statements to do the following: 
+    a. Append “banana” and 67 to the list. 
+    b. Insert the value “dog” at position 3. 
+    c. Insert the value 909 at the start of the list. 
+    d. Find the index of “hi”. 
+    e. Count the number of 67s in the list. 
+    f. Remove the first occurrence of 67 from the list. 
+    g. Remove False from the list using pop and index
+'''  
+        )
+        print('Answers: \n')
 
     def append_items(self, items):
         self.list_items.append(items)
@@ -44,10 +53,12 @@ class ListManipulator:
         input('\nPress any key to go back to the Lesson 4 menu...')
 
 class Program:
-    @staticmethod
-    def main():
+    def main(self):
         # Create an instance of the ListManipulator class
         list_manipulator = ListManipulator()
+        # Display title and the problem
+        list_manipulator.display_title_of_problem()
+        list_manipulator.display_problem()
 
         list_manipulator.append_items(67)
         list_manipulator.append_items(62.9)
