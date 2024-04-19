@@ -19,6 +19,7 @@ Mga Dapat Idagdag:
     5. Sa baba ng title, i-display yung problem na nasa ppt kada question sa Lesson 4 at Lesson 5
     6. Lagyan ng thank you phrase sa dulo everytime after ma-execute ung bawat code sa Lesson 4 at Lesson 5
     7. If required kay Sir na magpa-input ulit if invalid ung input ng user, magdadagdag tayo ng validation sa bawat problem from Lesson 4 to Lesson 5.
+    8. Maglagay ng members menu sa main.py
 
 
 Mga Dapat Baguhin:
