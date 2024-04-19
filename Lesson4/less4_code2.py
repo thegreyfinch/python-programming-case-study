@@ -50,7 +50,7 @@ Problem:
             self.list_items.pop(self.list_items.index(False))
 
     def go_back_to_lesson4_menu(self):  
-        input('\nPress any key to go back to the Lesson 4 menu...')
+        input('\nPress Enter to go back to the Lesson 4 menu...')
 
 class Program:
     def main(self):

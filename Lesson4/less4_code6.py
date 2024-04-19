@@ -31,7 +31,7 @@ Problem:
         print(f"Unique List : {self.unique_list}")
 
     def go_back_to_lesson4_menu(self):
-        input('\nPress any key to go back to the Lesson 4 menu...') 
+        input('\nPress Enter to go back to the Lesson 4 menu...') 
 
 
 class Program:
