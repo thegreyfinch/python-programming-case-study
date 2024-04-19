@@ -1,5 +1,5 @@
 import os # for clearing the console / screen
-# from Lesson4 import less4_code1, less4_code2, less4_code3, less4_code4, less4_code5, less4_code6
+from Lesson4 import less4_code1, less4_code2, less4_code3 # wala pa ung code 4, 5, and 6
 from Lesson5 import less5_code1, less5_code2, less5_code3, less5_code4, less5_code5
 
 def clear_console():
