@@ -1,16 +1,28 @@
 '''
-Write a program that asks the user to enter size of list and input a list of integers. Do the following:’ 
-a. Print the sum of items in the list. 
-b. Print the last item in the list. 
-c. Print the list in reverse order. 
-d. Print Yes if the list contains a 5 and No otherwise. 
-e. Print how many integers in the list are less than 5. 
-f. Remove the first and last items from the list, sort the remaining items, and print the result.
+
 '''
 
 class ListProcessor:
     def __init__(self):
         self.int_list = []
+    
+    def display_title_of_problem(self):
+        print('Title: List Methods in Use: Append, Insert, Index, Count, Pop, and Remove')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    Write a program that asks the user to enter size of list and input a list of integers. Do the following: 
+        a. Print the sum of items in the list. 
+        b. Print the last item in the list. 
+        c. Print the list in reverse order. 
+        d. Print Yes if the list contains a 5 and No otherwise. 
+        e. Print how many integers in the list are less than 5. 
+        f. Remove the first and last items from the list, sort the remaining items, and print the result.
+'''
+        )
+        print('Answers: \n')
 
     def input_list(self, size):
         for i in range(size):
@@ -42,9 +54,11 @@ class ListProcessor:
         input('\nPress any key to go back to the Lesson 4 menu...') 
 
 class Program:
-    @staticmethod
-    def main():
+    def main(self):
         list_processor = ListProcessor()
+        # Display title and problem
+        list_processor.display_title_of_problem()
+        list_processor.display_problem()
 
         size = int(input("Enter the size of the list: "))
         list_processor.input_list(size)
