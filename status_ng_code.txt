@@ -9,6 +9,17 @@ Current Status:
     codes sa Lesson 4.
 
 
+Mga Dapat Idagdag:
+
+    Ito yung mga dapat idagdag na wala pa diyan sa case study:
+    1. Mga codes sa Lesson 4
+    2. Menu para sa Lesson 4
+    3. Pag-import ng mga codes sa Lesson 4
+    4. Lagyan ng title sa taas ang bawat problem sa Lesson 4 at Lesson 5
+    5. Sa baba ng title, i-display yung problem na nasa ppt kada question sa Lesson 4 at Lesson 5
+    6. Lagyan ng thank you phrase sa dulo everytime after ma-execute ung bawat code sa Lesson 4 at Lesson 5
+
+
 Mga Dapat Baguhin:
 
     1. If want niyo baguhin yung hitsura ng main menu pati yung menu for Lesson 4 at Lesson 5, do so.
@@ -20,14 +31,6 @@ Mga Dapat Baguhin:
 Mga Dapat Alisin:
 
     So far wala pa namang dapat alisin.
-
-
-Mga Dapat Idagdag:
-
-    Ito yung mga dapat idagdag na wala pa diyan sa case study:
-    1. Mga codes sa Lesson 4
-    2. Menu para sa Lesson 4
-    3. Pag-import ng mga codes sa Lesson 4
 
 
 NOTE: Paki-update itong file na ito every time na may gusto kayong i-note para mabasa ng bawat isa...
