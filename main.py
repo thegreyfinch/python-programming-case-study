@@ -3,7 +3,7 @@ from Lesson4 import less4_code1, less4_code2, less4_code3, less4_code4, less4_co
 from Lesson5 import less5_code1, less5_code2, less5_code3, less5_code4, less5_code5
 
 # ANSI color escape codes
-class Color:
+class Color: 
     HEADER = '\033[95m'
     BLUE = '\033[94m'
     GREEN = '\033[92m'
