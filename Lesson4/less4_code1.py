@@ -31,7 +31,7 @@ class ListMethods:
         
     @staticmethod
     def go_back_to_lesson4_menu():
-        input('\nPress any key to go back to the Lesson 5 menu...') 
+        input('\nPress any key to go back to the Lesson 4 menu...') 
 
 class Program:
     @staticmethod
