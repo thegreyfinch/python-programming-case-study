@@ -19,7 +19,7 @@ class FactorFinder:
     def display_factors(self):
         print(f"The factors of {self.num} are {self.factors}")
 
-    def go_back_to_lesson4_menu():
+    def go_back_to_lesson4_menu(self):
         input('\nPress any key to go back to the Lesson 4 menu...') 
 
     def find_and_display_factors(self):

@@ -40,7 +40,7 @@ class ListManipulator:
         if False in self.list_items:
             self.list_items.pop(self.list_items.index(False))
 
-    def go_back_to_lesson4_menu():  
+    def go_back_to_lesson4_menu(self):  
         input('\nPress any key to go back to the Lesson 4 menu...')
 
 class Program:
@@ -79,7 +79,7 @@ class Program:
         list_manipulator.remove_false_using_pop()
         print(f"G. ] Removed False using pop and index : {list_manipulator.list_items}")    
 
-        ListManipulator.go_back_to_lesson4_menu()
+        list_manipulator.go_back_to_lesson4_menu()
 
 if __name__ == "__main__":
     program = Program()

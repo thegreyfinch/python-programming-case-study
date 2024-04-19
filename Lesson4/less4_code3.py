@@ -38,7 +38,7 @@ class ListProcessor:
             self.int_list.sort()
         return self.int_list
     
-    def go_back_to_lesson4_menu():
+    def go_back_to_lesson4_menu(self):
         input('\nPress any key to go back to the Lesson 4 menu...') 
 
 class Program:
@@ -56,7 +56,7 @@ class Program:
         print(f"E. ] There are {list_processor.count_less_than_5()} integers in the list that are less than 5")
         print(f"F. ] Sorted list after removing first and last item : {list_processor.remove_sort()}")
 
-        ListProcessor.go_back_to_lesson4_menu()
+        list_processor.go_back_to_lesson4_menu()
 
 if __name__ == "__main__":
     program = Program()

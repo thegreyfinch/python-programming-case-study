@@ -19,7 +19,7 @@ class ListCleaner:
     def display_clean_list(self):
         print(f"Clean List : {self.clean_list}")
 
-    def go_back_to_lesson4_menu():
+    def go_back_to_lesson4_menu(self):
         input('\nPress any key to go back to the Lesson 4 menu...') 
 
 
