@@ -1,17 +1,26 @@
 '''
-Problem:
-    Write a program that will ask user to input a list of integer tuples. 
-    Ask also for another integer value and assign it to K. 
-    Output the tuple that are divisible by K.
-'''
 
-# Final Source Code:
+'''
 
 class ListOfTuple:
     def __init__(self):
         self.K = None
         self.int_tup_list = [] # list that contains the tuple of integers
         self.div_int_tup_list = [] # list that contains the tuple of integers that are divisible by K
+    
+    def display_title_of_problem(self):
+        print('Title: Divisible Tuples from Integer Tuple List.')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    Write a program that will ask user to input a list of integer tuples. 
+    Ask also for another integer value and assign it to K. 
+    Output the tuple that are divisible by K.
+'''
+        )
+        print('Answers: \n')
 
     def get_user_input_for_list(self):
         # get user input for a list of integer tuples
@@ -75,6 +84,8 @@ class ListOfTuple:
 class Program:
     def main(self):
         my_obj = ListOfTuple()
+        my_obj.display_title_of_problem()
+        my_obj.display_problem()
         my_obj.get_user_input_for_list()
         my_obj.display_list_of_tup()
         my_obj.get_input_for_k()
