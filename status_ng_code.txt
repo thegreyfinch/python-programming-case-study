@@ -20,6 +20,7 @@ Mga Dapat Idagdag:
     6. Lagyan ng thank you phrase sa dulo everytime after ma-execute ung bawat code sa Lesson 4 at Lesson 5
     7. If required kay Sir na magpa-input ulit if invalid ung input ng user, magdadagdag tayo ng validation sa bawat problem from Lesson 4 to Lesson 5.
     8. Maglagay ng members menu sa main.py
+    9. Palitan ung message sa Lesson 4 codes doon sa go_back_to_lesson_4_menu()
 
 
 Mga Dapat Baguhin:
