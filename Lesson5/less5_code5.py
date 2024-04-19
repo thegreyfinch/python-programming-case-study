@@ -1,14 +1,3 @@
-'''
-Problem:
-    Write a program that uses a dictionary that contains ten user names and passwords. 
-    The program should ask the user to enter their username and password. If the username is not in the dictionary, 
-    the program should indicate that the person is not a valid user of the system. If the username is in the dictionary, 
-    but the user does not enter the right password, the program should say that the password is invalid. 
-    If the password is correct, then the program should tell the user that they are now logged in to the system.
-'''
-
-# Final Source Code:
-
 class LogIn:
     def __init__(self):
         self.user_credentials = {
@@ -25,6 +14,22 @@ class LogIn:
         }
         self.username = None # property that stores the inputted username by the user
         self.password = None # property that stores the inputted password by the user
+    
+    def display_title_of_problem(self):
+        print('Title: User Authentication System')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    Write a program that uses a dictionary that contains ten user names and passwords. 
+    The program should ask the user to enter their username and password. If the username is not in the dictionary, 
+    the program should indicate that the person is not a valid user of the system. If the username is in the dictionary, 
+    but the user does not enter the right password, the program should say that the password is invalid. 
+    If the password is correct, then the program should tell the user that they are now logged in to the system.
+'''
+        )
+        print('Answer: \n')
     
     def get_user_input(self):
         print(' ----------------------------------')
@@ -66,6 +71,8 @@ class LogIn:
 class Program:
     def main(self):
         log_in = LogIn()
+        log_in.display_title_of_problem()
+        log_in.display_problem()
         log_in.get_user_input()
         log_in.validate_username()
         log_in.go_back_to_lesson5_menu()
