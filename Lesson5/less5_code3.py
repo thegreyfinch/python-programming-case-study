@@ -1,17 +1,3 @@
-'''
-Problem:
-    Here is a dictionary of the days in the months of the year: 
-    days = {'January':31, 'February':28, 'March':31, 'April':30, 'May':31, 'June':30, 'July':31, 'August':31, 
-    'September':30, 'October':31, 'November':30, 'December':31} 
-
-    a. Ask the user to enter a month name and use the dictionary to tell them how many days are in the month. 
-    b. Print out all of the keys in alphabetical order. 
-    c. Print out all of the months with 31 days. 
-    d. Print out the (key-value) pairs sorted by the number of days in each month
-'''
-
-# Final Source Code:
-
 class DaysPerMonth:
     # initialize the properties inside the __init__()
     def __init__(self):
@@ -31,6 +17,25 @@ class DaysPerMonth:
         }
         self.sorted_months = None # a list property that stores the sorted months
         self.sorted_items = None # a dictionary property that stores the sorted items based on the number of days
+    
+    def display_title_of_problem(self):
+        print('Title: Manage Days in Months')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    Here is a dictionary of the days in the months of the year: 
+    days = {'January':31, 'February':28, 'March':31, 'April':30, 'May':31, 'June':30, 'July':31, 'August':31, 
+    'September':30, 'October':31, 'November':30, 'December':31} 
+
+    a. Ask the user to enter a month name and use the dictionary to tell them how many days are in the month. 
+    b. Print out all of the keys in alphabetical order. 
+    c. Print out all of the months with 31 days. 
+    d. Print out the (key-value) pairs sorted by the number of days in each month
+'''
+        )
+        print('Answers: \n')
 
     def display_dictionary(self):
         print('DAYS PER MONTH: ')
@@ -90,6 +95,8 @@ class DaysPerMonth:
 class Program:
     def main(self):
         my_obj = DaysPerMonth()
+        my_obj.display_title_of_problem()
+        my_obj.display_problem()
         my_obj.display_dictionary()
         my_obj.get_input_for_month()
         my_obj.sort_month_name()
