@@ -1,7 +1,3 @@
-'''
-
-'''
-
 class ListProcessor:
     def __init__(self):
         self.int_list = []
