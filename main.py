@@ -46,9 +46,14 @@ def display_main_menu():
     print(f'|     {Color.BLUE}Lesson 4     {Color.GREEN}|      {Color.BLUE}Lesson 5     {Color.GREEN}|')
     print(f'|       ( {Color.HEADER}A {Color.GREEN})      |       ( {Color.HEADER}B {Color.GREEN})       |')
     print(f'|--------------------------------------|')
+    print(f'|            {Color.BLUE}Display Members{Color.GREEN}           |')
+    print(f'|                 ( {Color.HEADER}C {Color.GREEN})                |')
+    print(f'|--------------------------------------|')
     print(f'|                 {Color.WARNING}Exit                 {Color.GREEN}|')
     print(f'|                 ( {Color.FAIL}E {Color.GREEN})                |')
     print(f' ======================================{Color.ENDC}')
+
+
 
 def switch_for_lesson4(choice):
     if choice == 1:
@@ -136,6 +141,22 @@ def display_lesson5_menu():
         else:
             print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
 
+def display_members():
+    clear_console()
+    print(f'{Color.GREEN} =======================================')
+    print(f'|           {Color.HEADER}MEMBERS OF GROUP 3{Color.GREEN}          |')
+    print(f' ======================================={Color.ENDC}')
+    print(f'{Color.GREEN}╔═══════════════════════════════════════╗{Color.ENDC}')
+    print(f'{Color.GREEN}║ Aloveros, Baron                       ║{Color.ENDC}')
+    print(f'{Color.GREEN}║ Estanislao, Ranjel                    ║{Color.ENDC}')
+    print(f'{Color.GREEN}║ Marial, Erice Michael                 ║{Color.ENDC}')
+    print(f'{Color.GREEN}║ Sinday, Ellen Grace                   ║{Color.ENDC}')
+    print(f'{Color.GREEN}║ Solano, Cedric Mark                   ║{Color.ENDC}')
+    print(f'{Color.GREEN}║ Vargas, Ashley John                   ║{Color.ENDC}')
+    print(f'{Color.GREEN}╚═══════════════════════════════════════╝{Color.ENDC}')
+    input(f'\n{Color.WARNING}Press any key to continue...{Color.ENDC}')
+
+
 def display_thank_you():
     print(f' {Color.GREEN}======================================')
     print(f'|                                      |')
@@ -155,6 +176,8 @@ def main():
             display_lesson4_menu()
         elif choice == 'B':
             display_lesson5_menu()
+        elif choice == 'C':
+            display_members()
         elif choice == 'E':
             clear_console()
             display_thank_you()
