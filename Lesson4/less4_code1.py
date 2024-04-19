@@ -3,23 +3,49 @@ class ListMethods:
         self.x = [1, 2, 3, 4, 5]
         self.y = [11, 12, 13, 14, 15]
         self.z = (21, 22, 23, 24, 25)
+    
+    def display_title_of_problem(self):
+        print('Title: List Manipulation and Slicing')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    • Define the variables x and y as lists of numbers
+    • x=[1, 2, 3, 4, 5]
+    • y=[11, 12, 13, 14, 15]
+    • z=(21, 22, 23, 24, 25)
+        a. What is the value of 3*x?
+        b. What is the value of x+y?
+        c. What is the value of x-y?
+        d. What is the value of x[1]?
+        e. What is the value of x[0]?
+        f. What is the value of x[-1]?
+        g. What is the value of x[:]?
+        h. What is the value of x[2:4]?
+        i. What is the value of x[1:4:2]?
+        j. What is the value of x[:2]?
+        k. What is the value of x[::2]?
+        l. What is the result of the following two expressions?
+        ▫ x[3]=8
+        ▫ print x
+'''
+        )
+        print('Answers: \n')
 
-    @staticmethod
-    def slice_list(lst, start=None, stop=None, step=None):
+    def slice_list(self, lst, start=None, stop=None, step=None):
         if start is None and stop is None and step is None:
             return lst[:]  # Return a copy of the list if no slicing arguments are provided
         else:
             return lst[start:stop:step]
 
-    @staticmethod
-    def get_element_at_index(lst, index):
+    def get_element_at_index(self, lst, index):
         if -len(lst) <= index < len(lst):
             return lst[index]
         else:
             return None  # Return None for out-of-range indices
 
-    @staticmethod
-    def perform_list_operation(x, y, operation):
+    def perform_list_operation(self, x, y, operation):
         if operation == '+':
             return x + y
         elif operation == '-':
@@ -29,14 +55,16 @@ class ListMethods:
         else:
             return None
         
-    @staticmethod
-    def go_back_to_lesson4_menu():
+    def go_back_to_lesson4_menu(self):
         input('\nPress any key to go back to the Lesson 4 menu...') 
 
 class Program:
-    @staticmethod
-    def main():
+    def main(self):
         list_methods = ListMethods()  # Instantiate ListMethods to access x, y, and z
+
+        # Display the title and the problem
+        list_methods.display_title_of_problem()
+        list_methods.display_problem()
 
         # Accessing x, y, z
         x_list = list_methods.x
