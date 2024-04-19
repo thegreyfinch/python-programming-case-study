@@ -1,3 +1,13 @@
+class Products:
+    def __init__(self):
+        self.product_info = {} # dictionary that will contain product name and product price pair
+        self.product_names = None # a list that stores the product names
+    
+    def display_title_of_problem(self):
+        print('Title: Manage Products and Prices')
+    
+    def display_problem(self):
+        print(
 '''
 Problem:
     Write a program that repeatedly asks the user to enter product names and prices. 
@@ -5,14 +15,9 @@ Problem:
     When the user is done entering products and prices, allow them to repeatedly enter a product name and 
     print the corresponding price or a message if the product is not in the dictionary. 
 '''
+        )
+        print('Answers: ')
 
-# Final Source Code:
-
-class Products:
-    def __init__(self):
-        self.product_info = {} # dictionary that will contain product name and product price pair
-        self.product_names = None # a list that stores the product names
-    
     def get_input_for_prod_info(self):
         i = 0 # increment variable to display the nth number of product
         while True:
@@ -91,6 +96,8 @@ class Products:
 class Program:
     def main(self):
         my_obj = Products()
+        my_obj.display_title_of_problem()
+        my_obj.display_problem()
         my_obj.get_input_for_prod_info()
         my_obj.display_products()
         my_obj.display_price_per_product()
