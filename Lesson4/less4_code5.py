@@ -1,83 +1,41 @@
 '''
 Problem:
-    Write a program that asks the user for an integer and creates a list that consists of the factors of that integer.
+    Write a program that asks the user for an integer
+    and creates a list that consists of the factors of that intege
 '''
+class FactorFinder:
+    def __init__(self):
+        self.num = None
+        self.factors = []
 
-# ESTANISLAO:
-# Ask the user for an integer
-num = int(input("Enter an integer: "))
+    def get_integer(self):
+        self.num = int(input("Enter an integer: "))
 
-# Initialize an empty list to store factors
-factors = []
+    def find_factors(self):
+        for i in range(1, self.num + 1):
+            if self.num % i == 0:
+                self.factors.append(i)
 
-# Iterate through numbers from 1 to the input number
-for i in range(1, num + 1):
-    # Check if the current number is a factor of the input number
-    if num % i == 0:
-        # If it is, add it to the list of factors
-        factors.append(i)
+    def display_factors(self):
+        print(f"The factors of {self.num} are {self.factors}")
 
-# Print the list of factors
-print("Factors of", num, "are:", factors)
+    def go_back_to_lesson4_menu():
+        input('\nPress any key to go back to the Lesson 4 menu...') 
 
-
-# SOLANO:
-# Function to find factors of a given number
-def find_factors(num):
-    factors = []
-    for i in range(1, num + 1):
-        if num % i == 0:
-            factors.append(i)
-    return factors
-
-# Ask the user for an integer
-try:
-    num = int(input("Enter an integer: "))
-    if num < 1:
-        print("Please enter a positive integer.")
-    else:
-        # Find factors of the given integer
-        factors = find_factors(num)
-        
-        # Print the list of factors
-        print("Factors of", num, "are:", factors)
-except ValueError:
-    print("Invalid input! Please enter a valid integer.")
-
-# ALOVEROS:
-
-def user_overcompensate(arr):
-    user_input = int(input("Please Enter a number: "))
-    for x in range(1, user_input + 1):
-        if user_input % x == 0:
-            arr.append(x)
-    return user_input, arr
+    def find_and_display_factors(self):
+        self.get_integer()
+        self.find_factors()
+        self.display_factors()
+        self.go_back_to_lesson4_menu()
 
 
-list = []
-user_input, list = user_overcompensate(list)
-print(f"The list of factors of {user_input} are: {list}")
+class Program:
+    @staticmethod
+    def main():
+        factor_finder = FactorFinder()
+        factor_finder.find_and_display_factors()
 
 
-# SINDAY:
-
-def find_factors(number):
-    factors = []
-    for i in range(1, number + 1):
-        if number % i == 0:
-            factors.append(i)
-    return factors
-
-# Ask the user for an integer
-try:
-    user_input = int(input("Enter an integer: "))
-    if user_input <= 0:
-        print("Please enter a positive integer.")
-    else:
-        # Create a list of factors
-        factors_list = find_factors(user_input)
-        
-        # Print the list of factors
-        print("The factors of", user_input, "are:", factors_list)
-except ValueError:
-    print("Please enter a valid integer.")
+if __name__ == "__main__":
+    program = Program()
+    program.main()
