@@ -1,4 +1,4 @@
-class Products:
+class ProductPriceManager:
     def __init__(self):
         self.product_info = {} # dictionary that will contain product name and product price pair
         self.product_names = None # a list that stores the product names
@@ -95,13 +95,13 @@ Problem:
 
 class Program:
     def main(self):
-        my_obj = Products()
-        my_obj.display_title_of_problem()
-        my_obj.display_problem()
-        my_obj.get_input_for_prod_info()
-        my_obj.display_products()
-        my_obj.display_price_per_product()
-        my_obj.go_back_to_lesson5_menu()
+        product_price_manager = ProductPriceManager()
+        product_price_manager.display_title_of_problem()
+        product_price_manager.display_problem()
+        product_price_manager.get_input_for_prod_info()
+        product_price_manager.display_products()
+        product_price_manager.display_price_per_product()
+        product_price_manager.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()

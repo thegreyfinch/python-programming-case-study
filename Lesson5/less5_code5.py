@@ -1,4 +1,4 @@
-class LogIn:
+class UserAuthentication:
     def __init__(self):
         self.user_credentials = {
             'user1': 'password1',
@@ -70,12 +70,12 @@ Problem:
 
 class Program:
     def main(self):
-        log_in = LogIn()
-        log_in.display_title_of_problem()
-        log_in.display_problem()
-        log_in.get_user_input()
-        log_in.validate_username()
-        log_in.go_back_to_lesson5_menu()
+        user_authentication = UserAuthentication()
+        user_authentication.display_title_of_problem()
+        user_authentication.display_problem()
+        user_authentication.get_user_input()
+        user_authentication.validate_username()
+        user_authentication.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()

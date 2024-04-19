@@ -1,4 +1,4 @@
-class ListOfTuple:
+class DivisibleTupleFinder:
     def __init__(self):
         self.K = None
         self.int_tup_list = [] # list that contains the tuple of integers
@@ -63,7 +63,7 @@ Problem:
                 print('Error: Invalid input. Please enter an integer...\n')
 
     def is_divisible_by_k(self, tup):
-        return all(elem % self.K == 0 for elem in tup) # returns 
+        return all(elem % self.K == 0 for elem in tup) 
             
 
     def display_divisible_tuples(self):
@@ -72,6 +72,8 @@ Problem:
         for tup in self.int_tup_list:
             if self.is_divisible_by_k(tup):
                 print(tup, end = ' ')
+        if not self.is_divisible_by_k(tup):
+            print('None')
         print()
     
     def go_back_to_lesson5_menu(self):
@@ -79,14 +81,14 @@ Problem:
 
 class Program:
     def main(self):
-        my_obj = ListOfTuple()
-        my_obj.display_title_of_problem()
-        my_obj.display_problem()
-        my_obj.get_user_input_for_list()
-        my_obj.display_list_of_tup()
-        my_obj.get_input_for_k()
-        my_obj.display_divisible_tuples()
-        my_obj.go_back_to_lesson5_menu()
+        tuple_finder = DivisibleTupleFinder()
+        tuple_finder.display_title_of_problem()
+        tuple_finder.display_problem()
+        tuple_finder.get_user_input_for_list()
+        tuple_finder.display_list_of_tup()
+        tuple_finder.get_input_for_k()
+        tuple_finder.display_divisible_tuples()
+        tuple_finder.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()

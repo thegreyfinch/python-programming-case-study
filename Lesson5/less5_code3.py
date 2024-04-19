@@ -1,4 +1,4 @@
-class DaysPerMonth:
+class MonthDayManager:
     # initialize the properties inside the __init__()
     def __init__(self):
         self.days = {
@@ -94,15 +94,15 @@ Problem:
 
 class Program:
     def main(self):
-        my_obj = DaysPerMonth()
-        my_obj.display_title_of_problem()
-        my_obj.display_problem()
-        my_obj.display_dictionary()
-        my_obj.get_input_for_month()
-        my_obj.sort_month_name()
-        my_obj.display_months_with_31_days()
-        my_obj.display_items_sorted_by_days()
-        my_obj.go_back_to_lesson5_menu()
+        month_day_manager = MonthDayManager()
+        month_day_manager.display_title_of_problem()
+        month_day_manager.display_problem()
+        month_day_manager.display_dictionary()
+        month_day_manager.get_input_for_month()
+        month_day_manager.sort_month_name()
+        month_day_manager.display_months_with_31_days()
+        month_day_manager.display_items_sorted_by_days()
+        month_day_manager.go_back_to_lesson5_menu()
 
 if __name__ == "__main__":
     program = Program()
