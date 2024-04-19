@@ -17,7 +17,12 @@ Problem:
         print('Answers: \n')
 
     def get_integer(self):
-        self.num = int(input("Enter an integer: "))
+        while True:
+            try:
+                self.num = int(input("Enter an integer: "))
+                break
+            except ValueError:
+                print('Error: Invalid input! Please enter an integer...\n')
 
     def find_factors(self):
         for i in range(1, self.num + 1):
