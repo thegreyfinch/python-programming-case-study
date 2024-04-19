@@ -1,6 +1,3 @@
-'''
-
-'''
 class ListModifier:
     def __init__(self):
         self.int_list = [8, 9, 10]
