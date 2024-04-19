@@ -10,7 +10,7 @@ def intro():
     print('|               WELCOME TO              |')
     print('|         COMPILATION OF CODES!         |')
     print('| This program is a compilation of all  |')
-    print('|   the codes in Lesson 4 and Lesson 5  |')
+    print('|   the codes in Lesson 4 and Lesson 5  |') 
     print('|             in the subject            |')
     print('|         Integrative Programming       |')
     print(' =======================================')
