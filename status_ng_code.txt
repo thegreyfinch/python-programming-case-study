@@ -23,6 +23,7 @@ Mga Dapat Idagdag:
     9. Palitan ung message sa Lesson 4 codes doon sa go_back_to_lesson_4_menu()
     10. Maglagay ng comments sa lahat ng code from Lesson 4 to Lesson 5 at pati sa main.py
     11. Baguhin name ng objects sa Lesson 5 na codes. Gawing mas descriptive.
+    12. I-modify yung mga code sa Lesson 4. Lagyan ng title, problem, go back to lesson 4 menu, improve the design, check the object name, and check the answers/outputs.
 
 
 Mga Dapat Baguhin:
