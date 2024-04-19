@@ -25,7 +25,7 @@ Problem:
         print(self.tuple_list)
     
     def go_back_to_lesson5_menu(self):
-        input('\nPress any key to go back to the Lesson 5 menu...')
+        input('\nPress Enter to go back to the Lesson 5 menu...')
 
 class Program:
     def main(self):

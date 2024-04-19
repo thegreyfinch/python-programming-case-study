@@ -66,7 +66,7 @@ Problem:
         print('\n You have successfully logged in to the system!')
     
     def go_back_to_lesson5_menu(self):
-        input('\n Press any key to go back to the Lesson 5 menu...')
+        input('\n Press Enter to go back to the Lesson 5 menu...')
 
 class Program:
     def main(self):
