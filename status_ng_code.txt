@@ -17,11 +17,11 @@ Mga Dapat Idagdag:
     3. Pag-import ng mga codes sa Lesson 4 - done
     4. Lagyan ng title sa taas ang bawat problem sa Lesson 4 at Lesson 5 - done
     5. Sa baba ng title, i-display yung problem na nasa ppt kada question sa Lesson 4 at Lesson 5 - done
-    6. Lagyan ng thank you phrase sa dulo everytime after ma-execute ung bawat code sa Lesson 4 at Lesson 5 - not yet done, wag na lang
+    6. Lagyan ng thank you phrase sa dulo everytime after ma-execute ung bawat code sa Lesson 4 at Lesson 5 - void
     7. If required kay Sir na magpa-input ulit if invalid ung input ng user, magdadagdag tayo ng validation sa bawat problem from Lesson 4 to Lesson 5. - done, maliban sa #3 sa less 4
-    8. Maglagay ng members menu sa main.py - not yet done
+    8. Maglagay ng members menu sa main.py - done
     9. Palitan ung message sa Lesson 4 codes doon sa go_back_to_lesson_4_menu() - done
-    10. Maglagay ng comments sa lahat ng code from Lesson 4 to Lesson 5 at pati sa main.py - not yet done
+    10. Maglagay ng comments sa lahat ng code from Lesson 4 to Lesson 5 at pati sa main.py - done
     11. Baguhin name ng objects sa Lesson 5 na codes. Gawing mas descriptive. - done
     12. I-modify yung mga code sa Lesson 4. Lagyan ng title, problem, go back to lesson 4 menu, improve the design, check the object name, and check the answers/outputs. - done
 
