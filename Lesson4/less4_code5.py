@@ -1,12 +1,20 @@
-'''
-Problem:
-    Write a program that asks the user for an integer
-    and creates a list that consists of the factors of that intege
-'''
 class FactorFinder:
     def __init__(self):
         self.num = None
         self.factors = []
+    
+    def display_title_of_problem(self):
+        print('Title: Factor List Generator: Create a List of Factors from User Input')
+    
+    def display_problem(self):
+        print(
+'''
+Problem:
+    Write a program that asks the user for an integer
+    and creates a list that consists of the factors of that integer.
+'''
+        )
+        print('Answers: \n')
 
     def get_integer(self):
         self.num = int(input("Enter an integer: "))
@@ -30,9 +38,11 @@ class FactorFinder:
 
 
 class Program:
-    @staticmethod
-    def main():
+    def main(self):
         factor_finder = FactorFinder()
+        # Display title and problem
+        factor_finder.display_title_of_problem()
+        factor_finder.display_problem()
         factor_finder.find_and_display_factors()
 
 
