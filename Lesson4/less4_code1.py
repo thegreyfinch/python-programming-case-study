@@ -51,14 +51,14 @@ class Program:
         except TypeError as e:
             print(f"C. ] x - y = Error: {e}")
         # Accessing elements and slicing
-        print(f"D. ] The value of x[1] is {list_methods.get_element_at_index(x_list, 1)}")
-        print(f"E. ] The value of x[0] is {list_methods.get_element_at_index(x_list, 0)}")
-        print(f"F. ] The value of x[-1] is {list_methods.get_element_at_index(x_list, -1)}")
-        print(f"G. ] The value of x[:] is {list_methods.slice_list(x_list)}")
-        print(f"H. ] The value of x[2:4] is {list_methods.slice_list(x_list, 2, 4)}")
-        print(f"I. ] The value of x[1:4:2] is {list_methods.slice_list(x_list, 1, 4, 2)}")
-        print(f"J. ] The value of x[:2] is {list_methods.slice_list(x_list, None, 2)}")
-        print(f"K. ] The value of x[::2] is {list_methods.slice_list(x_list, None, None, 2)}")
+        print(f"D. ] Value of x[1] : {list_methods.get_element_at_index(x_list, 1)}")
+        print(f"E. ] Value of x[0] : {list_methods.get_element_at_index(x_list, 0)}")
+        print(f"F. ] Value of x[-1] : {list_methods.get_element_at_index(x_list, -1)}")
+        print(f"G. ] Value of x[:] : {list_methods.slice_list(x_list)}")
+        print(f"H. ] Value of x[2:4] : {list_methods.slice_list(x_list, 2, 4)}")
+        print(f"I. ] Value of x[1:4:2] : {list_methods.slice_list(x_list, 1, 4, 2)}")
+        print(f"J. ] Value of x[:2] : {list_methods.slice_list(x_list, None, 2)}")
+        print(f"K. ] Value of x[::2] : {list_methods.slice_list(x_list, None, None, 2)}")
 
         x_list[3] = 8  # Modify x list
         print(f"L. ] Modified x[3] list: {x_list}")
