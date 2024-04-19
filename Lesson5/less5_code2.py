@@ -1,7 +1,3 @@
-'''
-
-'''
-
 class ListOfTuple:
     def __init__(self):
         self.K = None
