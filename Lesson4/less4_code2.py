@@ -1,94 +1,83 @@
 '''
-Problem:
-    Create a list with the following six items: 67, 62.9, "hi", False, 8, 67, 'apple', 6.5. 
-    Begin with the empty list shown below, and add 8 statements to add each item, one per item. 
-    The first four statements should use the append method to append the item to the list, and the last four statements should use concatenation.
+Create a list with the following six items: 67, 62.9, “hi”, False, 8, 67, ‘apple’, 6.5.
+ Begin with the empty list shown below, and add 8 statements to add each item, one per item.
+ The first four statements should use the append method to append the item to the list,
+ and the last four statements should use concatenation
 
-    Starting with the list of the previous exercise, write Python statements to do the following: 
-    A.	Append "banana" and 67 to the list.
-    B.	Insert the value "dog" at position 3. 
-    C.	Insert the value 909 at the start of the list. 
-    D.	Find the index of "hi". 
-    E.	Count the number of 67s in the list. 
-    F.	Remove the first occurrence of 67 from the list.
-    G.	Remove False from the list using pop and index
-'''
+ Starting with the list of the previous exercise, write Python statements to do the following: 
+ a. Append “banana” and 67 to the list. 
+ b. Insert the value “dog” at position 3. 
+ c. Insert the value 909 at the start of the list. 
+ d. Find the index of “hi”. 
+ e. Count the number of 67s in the list. 
+ f. Remove the first occurrence of 67 from the list. 
+ g. Remove False from the list using pop and index
+ '''
+class ListManipulator:
+    def __init__(self):
+        self.list_items = []
 
-# SOLANO:
-# Starting list
-my_list = [67, 62.9, "hi", False, 8, 67, 'apple', 6.5]
+    def append_items(self, items):
+        self.list_items.append(items)
 
-# A. Append "banana" and 67 to the list.
-my_list.append("banana")
-my_list.append(67)
+    def insert_item(self, index, item):
+        self.list_items.insert(index, item)
 
-# B. Insert the value "dog" at position 3.
-my_list.insert(3, "dog")
+    def concatenate_items(self, items):
+        self.list_items = self.list_items + [items]
 
-# C. Insert the value 909 at the start of the list.
-my_list.insert(0, 909)
+    def find_index_of_item(self, item):
+        return self.list_items.index(item) if item in self.list_items else -1
 
-# D. Find the index of "hi".
-index_of_hi = my_list.index("hi")
+    def count_item(self, item):
+        return self.list_items.count(item)
 
-# E. Count the number of 67s in the list.
-count_of_67 = my_list.count(67)
+    def remove_first_occurrence(self, item):
+        if item in self.list_items:
+            self.list_items.remove(item)
 
-# F. Remove the first occurrence of 67 from the list.
-my_list.remove(67)
-
-# G. Remove False from the list using pop and index
-index_of_false = my_list.index(False)
-my_list.pop(index_of_false)
-
-# Print the modified list
-print("Modified list:", my_list)
-print("Index of 'hi':", index_of_hi)
-print("Count of 67s:", count_of_67)
+    def remove_false_using_pop(self):
+        if False in self.list_items:
+            self.list_items.pop(self.list_items.index(False))
 
 
-# ALOVEROS:
+class Program:
+    @staticmethod
+    def main():
+        # Create an instance of the ListManipulator class
+        list_manipulator = ListManipulator()
 
-list = []
-list.append(67)
-list.append(62.9)
-list.append("Hi")
-list.append(False)
-list = list + [8]
-list =list + [67]
-list = list + ["apple"]
-list = list + [6.5]
-list.append("banana")
-list.append(67)
-list.insert(3, "dog")
-list.insert(0, 909)
-print(list)
-index_hi = list.index("Hi")
-print("Index of 'Hi':", index_hi)
-count_67 = list.count(67)
-print("Number of Occurences of 67's in the list:", count_67)
-list.remove(67)
-list.pop(list.index(False))
+        list_manipulator.append_items(67)
+        list_manipulator.append_items(62.9)
+        list_manipulator.append_items("hi")
+        list_manipulator.append_items(False)
+        print(f"A1. ] Appending in List : {list_manipulator.list_items}")
 
-# SINDAY:
+        list_manipulator.concatenate_items(8)
+        list_manipulator.concatenate_items(62.9)
+        list_manipulator.concatenate_items("hi")
+        list_manipulator.concatenate_items(False)
+        print(f"A2. ] Concatenation in List : {list_manipulator.list_items}")
 
-my_list = [67, 62.9, "hi", False, 8, 67, 'apple', 6.5]
+        list_manipulator.append_items('banana')
+        list_manipulator.append_items(67)
+        print(f"B. ] Appending 'banana' and '67' : {list_manipulator.list_items}")
+        
+        list_manipulator.insert_item(3, 'dog')
+        list_manipulator.insert_item(0, 909)
+        print(f"C. ] Insert 'dog' and 909 : {list_manipulator.list_items}")
 
-my_list.append("banana")
-my_list.append(67)
+        print(f"D. ] Index of 'hi' : {list_manipulator.find_index_of_item('hi')}")
+        
+        print(f"E. ] Number of 67s in the list : {list_manipulator.count_item(67)}")
+        
+        list_manipulator.remove_first_occurrence(67)
+        print(f"F. ] Removed first occurrence of 67 : {list_manipulator.list_items}")
+        
+        list_manipulator.remove_false_using_pop()
+        print(f"G. ] Removed False using pop and index : {list_manipulator.list_items}")    
 
-my_list.insert(3, "dog")
 
-my_list.insert(0, 909)
-
-hi_index = my_list.index("hi")
-
-count_67 = my_list.count(67)
-
-my_list.remove(67)
-
-false_index = my_list.index(False)
-my_list.pop(false_index)
-
-print(my_list)
-
+if __name__ == "__main__":
+    program = Program()
+    program.main()
