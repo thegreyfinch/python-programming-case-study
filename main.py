@@ -35,7 +35,7 @@ def intro():
     print(f'|                                                               |')
     print(f'|                    {Color.BLUE}Integrative Programming                    {Color.GREEN}|')
     print(f' ==============================================================={Color.ENDC}')
-    input(f'\n{Color.WARNING}Press any key to go to the main program...{Color.ENDC}')
+    input(f'\n{Color.WARNING}Press Enter to go to the main program...{Color.ENDC}')
 
 
 def display_main_menu():
@@ -79,26 +79,30 @@ def switch_for_lesson4(choice):
 
 def display_lesson4_menu():
     while True:
-        clear_console()
-        print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
-        print(f'|{Color.HEADER}                                LESSON 4 CODES                            {Color.GREEN}|')
-        print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
-        print(f'| {Color.BLUE}1. List Manipulation and Slicing                                         {Color.GREEN}|')
-        print(f'| {Color.BLUE}2. Adding, Finding Index, and Removing Items in the List                 {Color.GREEN}|')
-        print(f'| {Color.BLUE}3. List Methods in Use: Append, Insert, Index, Count, Pop, and Remove    {Color.GREEN}|')
-        print(f'| {Color.BLUE}4. Change Value, Add, Remove, Sort and Perform Operation in the List     {Color.GREEN}|')
-        print(f'| {Color.BLUE}5. Factor List Generator: Create a List of Factors from User Input       {Color.GREEN}|')
-        print(f'| {Color.BLUE}6. Removing Repeated Items in the List                                   {Color.GREEN}|')
-        print(f'| {Color.BLUE}7. Go back to the main menu                                              {Color.GREEN}|')
-        print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
-        ch = input('Enter choice here: ')
-        choice = int(ch)
-        if choice in range(1, 7):
-            switch_for_lesson4(choice)
-        elif choice == 7:
-            break
-        else:
-            print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
+        try:
+            clear_console()
+            print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
+            print(f'|{Color.HEADER}                                LESSON 4 CODES                            {Color.GREEN}|')
+            print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
+            print(f'| {Color.BLUE}1. List Manipulation and Slicing                                         {Color.GREEN}|')
+            print(f'| {Color.BLUE}2. Adding, Finding Index, and Removing Items in the List                 {Color.GREEN}|')
+            print(f'| {Color.BLUE}3. List Methods in Use: Append, Insert, Index, Count, Pop, and Remove    {Color.GREEN}|')
+            print(f'| {Color.BLUE}4. Change Value, Add, Remove, Sort and Perform Operation in the List     {Color.GREEN}|')
+            print(f'| {Color.BLUE}5. Factor List Generator: Create a List of Factors from User Input       {Color.GREEN}|')
+            print(f'| {Color.BLUE}6. Removing Repeated Items in the List                                   {Color.GREEN}|')
+            print(f'| {Color.BLUE}7. Go back to the main menu                                              {Color.GREEN}|')
+            print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
+            ch = input('Enter choice here: ')
+            choice = int(ch)
+            if choice in range(1, 7):
+                switch_for_lesson4(choice)
+            elif choice == 7:
+                break
+            else:
+                print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
+        except ValueError:
+            print('\nError: Invalid input! Please enter an integer.')
+            input('Press Enter to input again...')
 
 def switch_for_lesson5(choice):
     if choice == 1:
@@ -121,25 +125,29 @@ def switch_for_lesson5(choice):
 
 def display_lesson5_menu():
     while True:
-        clear_console()
-        print(f' {Color.GREEN}======================================================{Color.ENDC}')
-        print(f'|{Color.HEADER}                    LESSON 5 CODES                    {Color.GREEN}|')
-        print(f' {Color.GREEN}======================================================{Color.ENDC}')
-        print(f'| {Color.BLUE}1. Generate Tuples with Numbers and Their Squares.   {Color.GREEN}|')
-        print(f'| {Color.BLUE}2. Divisible Tuples from Integer Tuple List.         {Color.GREEN}|')
-        print(f'| {Color.BLUE}3. Manage Days in Months                             {Color.GREEN}|')
-        print(f'| {Color.BLUE}4. Manage Products and Prices                        {Color.GREEN}|')
-        print(f'| {Color.BLUE}5. User Authentication System                        {Color.GREEN}|')
-        print(f'| {Color.BLUE}6. Go back to the main menu                          {Color.GREEN}|')
-        print(f' {Color.GREEN}======================================================{Color.ENDC}')
-        ch = input('Enter choice here: ')
-        choice = int(ch)
-        if choice in range(1, 6):
-            switch_for_lesson5(choice)
-        elif choice == 6:
-            break
-        else:
-            print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
+        try:
+            clear_console()
+            print(f' {Color.GREEN}======================================================{Color.ENDC}')
+            print(f'|{Color.HEADER}                    LESSON 5 CODES                    {Color.GREEN}|')
+            print(f' {Color.GREEN}======================================================{Color.ENDC}')
+            print(f'| {Color.BLUE}1. Generate Tuples with Numbers and Their Squares.   {Color.GREEN}|')
+            print(f'| {Color.BLUE}2. Divisible Tuples from Integer Tuple List.         {Color.GREEN}|')
+            print(f'| {Color.BLUE}3. Manage Days in Months                             {Color.GREEN}|')
+            print(f'| {Color.BLUE}4. Manage Products and Prices                        {Color.GREEN}|')
+            print(f'| {Color.BLUE}5. User Authentication System                        {Color.GREEN}|')
+            print(f'| {Color.BLUE}6. Go back to the main menu                          {Color.GREEN}|')
+            print(f' {Color.GREEN}======================================================{Color.ENDC}')
+            ch = input('Enter choice here: ')
+            choice = int(ch)
+            if choice in range(1, 6):
+                switch_for_lesson5(choice)
+            elif choice == 6:
+                break
+            else:
+                print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
+        except ValueError:
+            print('\nError: Invalid input! Please enter an integer...')
+            input('Press Enter to input again...')
 
 def display_members():
     clear_console()
@@ -154,7 +162,7 @@ def display_members():
     print(f'{Color.GREEN}║ Solano, Cedric Mark                   ║{Color.ENDC}')
     print(f'{Color.GREEN}║ Vargas, Ashley John                   ║{Color.ENDC}')
     print(f'{Color.GREEN}╚═══════════════════════════════════════╝{Color.ENDC}')
-    input(f'\n{Color.WARNING}Press any key to continue...{Color.ENDC}')
+    input(f'\n{Color.WARNING}Press Enter to continue...{Color.ENDC}')
 
 
 def display_thank_you():
@@ -184,7 +192,7 @@ def main():
             break
         else:
             print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid option!{Color.ENDC}')
-            input('\nPress any key to continue...')
+            input('\nPress Enter to continue...')
 
 if __name__ == "__main__":
     main()
