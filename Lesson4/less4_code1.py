@@ -62,6 +62,7 @@ class Program:
 
         x_list[3] = 8  # Modify x list
         print(f"L. ] Modified x[3] list: {x_list}")
+
         list_methods.go_back_to_lesson4_menu()
 
 
