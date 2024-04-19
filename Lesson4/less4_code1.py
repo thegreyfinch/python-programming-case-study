@@ -62,7 +62,7 @@ class Program:
 
         x_list[3] = 8  # Modify x list
         print(f"L. ] Modified x[3] list: {x_list}")
-        ListMethods.go_back_to_lesson4_menu()
+        list_methods.go_back_to_lesson4_menu()
 
 
 if __name__ == "__main__":
