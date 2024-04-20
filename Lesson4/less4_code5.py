@@ -25,9 +25,15 @@ Problem:
                 print('Error: Invalid input! Please enter an integer...\n')
 
     def find_factors(self):
-        for i in range(1, self.num + 1):
-            if self.num % i == 0:
-                self.factors.append(i)
+        self.factors = []  # Reset the factors list
+        if self.num > 0:  # if input is positive
+            for i in range(1, self.num + 1):
+                if self.num % i == 0:
+                    self.factors.append(i)
+        elif self.num < 0: # if input is negative
+            for i in range(self.num, 0):
+                if self.num % i == 0:
+                    self.factors.append(i)
 
     def display_factors(self):
         print(f"The factors of {self.num} are {self.factors}")
