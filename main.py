@@ -50,6 +50,7 @@ def intro():
     input(f'\n{Color.WARNING}Press Enter to go to the main program...{Color.ENDC}')
 
 
+
 def display_main_menu():
     clear_console()
     print(f"   {Color.GREEN}___________________________________   ____________________________________")
@@ -134,6 +135,7 @@ def display_lesson5_menu():
         try:
             clear_console()
             print(f"    {Color.GREEN}____________________________________   ____________________________________")
+            print(f"    {Color.GREEN}____________________________________   ____________________________________")
             print(f".-/|                                    \\ /                                    |\\-.")
             print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
             print(f"||||            {Color.HEADER}LESSON 5 CODES           {Color.GREEN}|           {Color.HEADER}LESSON 5 CODES            {Color.GREEN}||||")
@@ -163,6 +165,7 @@ def display_lesson5_menu():
         except ValueError:
             print(f'\n{Color.FAIL}Error: Invalid input! Please enter an integer...{Color.ENDC}')
             input(f'{Color.FAIL}Press Enter to input again...{Color.ENDC}')
+
 
 def switch_for_lesson5(choice):
     if choice == 1:
