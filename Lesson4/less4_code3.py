@@ -1,6 +1,12 @@
+import os
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 class ListProcessor:
     def __init__(self):
         self.int_list = []
+        self.perform = True
     
     def display_title_of_problem(self):
         print('Title: List Methods in Use: Append, Insert, Index, Count, Pop, and Remove')
@@ -22,7 +28,13 @@ Problem:
 
     def input_list(self, size):
         for i in range(size):
-            self.int_list.append(int(input(f"Enter integer {i + 1}: ")))
+            try:
+                num = int(input(f"\nEnter integer #{i + 1}: "))
+                self.int_list.append(num)
+            except ValueError:
+                print("Invalid input. Enter a numeric value.")
+                self.perform = False
+                return
 
     def calculate_sum(self):
         return sum(self.int_list)
@@ -51,22 +63,40 @@ Problem:
 
 class Program:
     def main(self):
-        list_processor = ListProcessor()
-        # Display title and problem
-        list_processor.display_title_of_problem()
-        list_processor.display_problem()
+        while True:
+            list_processor = ListProcessor()
+            # Display title and problem
+            list_processor.display_title_of_problem()
+            list_processor.display_problem()
 
-        size = int(input("Enter the size of the list: "))
-        list_processor.input_list(size)
+            try:
+                size = int(input("Enter the size of the list: "))
+                list_processor.input_list(size)
+            except ValueError:
+                print("Invalid input. Enter a numeric value.")
+                list_processor.perform = False
 
-        print(f"\nA. ] Sum : {list_processor.calculate_sum()}")
-        print(f"B. ] Last Item : {list_processor.get_last_item()}")
-        print(f"C. ] List in Reverse Order : {list_processor.reverse_list()}")
-        print(f"D. ] Does the list contains a five(5) ? {list_processor.contains_5()}")
-        print(f"E. ] There are {list_processor.count_less_than_5()} integers in the list that are less than 5")
-        print(f"F. ] Sorted list after removing first and last item : {list_processor.remove_sort()}")
+            if (list_processor.perform):
+                print(f"\nA. ] Sum : {list_processor.calculate_sum()}")
+                print(f"B. ] Last Item : {list_processor.get_last_item()}")
+                print(f"C. ] List in Reverse Order : {list_processor.reverse_list()}")
+                print(f"D. ] Does the list contains a five(5) ? {list_processor.contains_5()}")
+                print(f"E. ] There are {list_processor.count_less_than_5()} integers in the list that are less than 5")
+                print(f"F. ] Sorted list after removing first and last item : {list_processor.remove_sort()}")
+            else:
+                while True:
+                    repeat = input("\nDo you want to try again? (Y/N): ").upper()
+
+                    if repeat in ['Y', 'N']:
+                        break
+                    else:
+                        print("Invalid input. Enter Y or N only...")
+                if repeat == 'N':
+                    break
 
         list_processor.go_back_to_lesson4_menu()
+
+        
 
 if __name__ == "__main__":
     program = Program()

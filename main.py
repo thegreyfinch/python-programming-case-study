@@ -49,8 +49,6 @@ def intro():
     print(f"`------------------------------------~___~-------------------------------------'")
     input(f'\n{Color.WARNING}Press Enter to go to the main program...{Color.ENDC}')
 
-
-
 def display_main_menu():
     clear_console()
     print(f"   {Color.GREEN}___________________________________   ____________________________________")
@@ -71,8 +69,6 @@ def display_main_menu():
     print(f"||                                     | ____________________________________||||")
     print(f"||_____________________________________|/=====================================\||")
     print(f"`------------------------------------~___~-------------------------------------'{Color.ENDC}")
-
-
 
 def display_lesson4_menu():
     while True:
@@ -97,6 +93,7 @@ def display_lesson4_menu():
             print(f"||/=====================================\\|/=====================================\\||")
             print(f"`--------------------------------------~___~-------------------------------------'{Color.ENDC}")
             ch = input(f'{Color.WARNING}Enter choice here: ')
+            print(f"{Color.ENDC}")
             choice = int(ch)
             if choice in range(1, 7):
                 switch_for_lesson4(choice)
@@ -154,6 +151,7 @@ def display_lesson5_menu():
             print(f"||/=====================================\\|/=====================================\\||")
             print(f"`--------------------------------------~___~-------------------------------------~'{Color.ENDC}")
             ch = input(f'{Color.WARNING}Enter choice here: ')
+            print(f"{Color.ENDC}")
             choice = int(ch)
             if choice in range(1, 6):
                 switch_for_lesson5(choice)
@@ -235,6 +233,7 @@ def main():
     while True:
         display_main_menu()
         ch = input(f'{Color.WARNING}Enter choice here: ')
+        print(f"{Color.ENDC}")
         choice = ch.upper()
 
         if choice == 'A':
