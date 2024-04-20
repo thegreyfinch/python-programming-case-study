@@ -26,28 +26,28 @@ Problem:
                 # validate user input whether it's a list or not
                 # if the user input is not a list, raise a ValueError exception
                 if not isinstance(self.int_tup_list, list):
-                    raise ValueError('Error: Invalid input! Please enter a list...\n')
+                    raise ValueError('Error: Invalid input! List is the only accepted value. Please input again...\n')
                 if not self.int_tup_list:
-                    raise ValueError('Error: Invalid input! Please enter a list...\n')          
+                    raise ValueError('Error: Invalid input! List is the only accepted value. Please input again...\n')          
                 # validate user input for the elements inside the list
                 for elem in self.int_tup_list:         
                     # if the user input for each element of the list is not a tuple, raise ValueError exception
                     if not isinstance(elem, tuple):
-                        raise ValueError("Error: Invalid input! Please enter a tuple of integer/s inside the list...\nIf trying to input a single-valued tuple, please add a comma ',' after the element (eg., [(1,), (2,), (3,)])...\n")
+                        raise ValueError("Error: Invalid input! Please enter a tuple of integer/s inside the list.\nIf trying to input a single-valued tuple, please add a comma ',' after the element (eg., [(1,), (2,), (3,)])...\nPlease input again...\n")
                     
                     # validate user input for the elements inside the tuple
                     else:
                         # if the elements inside the tuple is not integer, raise a ValueError exception
                         for num in elem:
                             if not isinstance(num, int):
-                                raise ValueError('Error: Invalid input! Please enter an integer inside the tuple...\n')
+                                raise ValueError('Error: Invalid input! Please enter an integer inside the tuple. Input again...\n')
                 break
             except ValueError as ve:
                 print(ve)
             except SyntaxError as se:
-                print('Syntax Error: Invalid input. Please enter the accurate value...\n')
+                print('Syntax Error: Invalid input. Please enter the accurate value. Input again...\n')
             except NameError:
-                print('Error: Invalid input. Please enter a list of integer tuples...\n')
+                print('Error: Invalid input. Please enter a list of integer tuples. Input again...\n')
 
     def display_list_of_tup(self):
         # display the list of tuple of integers
