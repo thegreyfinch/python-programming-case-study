@@ -33,7 +33,7 @@ Problem:
                 for elem in self.int_tup_list:         
                     # if the user input for each element of the list is not a tuple, raise ValueError exception
                     if not isinstance(elem, tuple):
-                        raise ValueError("Error: Invalid input! Please enter a tuple of integer/s inside the list.\nIf trying to input a single-valued tuple, please add a comma ',' after the element (eg., [(1,), (2,), (3,)])...\nPlease input again...\n")
+                        raise ValueError("Error: Invalid input! Please enter a tuple of integer/s inside the list.\nIf trying to input a single-valued tuple, please add a comma ',' after the element (eg., [(1,), (2,), (3,)]).\nPlease input again...\n")
                     
                     # validate user input for the elements inside the tuple
                     else:
