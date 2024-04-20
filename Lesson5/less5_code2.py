@@ -27,6 +27,8 @@ Problem:
                 # if the user input is not a list, raise a ValueError exception
                 if not isinstance(self.int_tup_list, list):
                     raise ValueError('Error: Invalid input! Please enter a list...\n')
+                if not self.int_tup_list:
+                    raise ValueError('Error: Invalid input! Please enter a list...\n')          
                 # validate user input for the elements inside the list
                 for elem in self.int_tup_list:         
                     # if the user input for each element of the list is not a tuple, raise ValueError exception
