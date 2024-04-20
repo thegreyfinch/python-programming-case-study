@@ -17,24 +17,36 @@ def clear_console():
 def intro():
     clear_console()
     ascii_art = f"""
-{Color.HEADER}░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗
-░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝
-░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░
-░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░
-░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗
-░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝{Color.ENDC}
-"""
+    {Color.HEADER}
+    ░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗
+    ░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝
+    ░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░
+    ░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░
+    ░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗
+    ░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝
+    {Color.ENDC}
+    """
     print(ascii_art)
-    input(f'\n{Color.WARNING}Press any key to see the welcome message...{Color.ENDC}')
+    input(f'\n{Color.WARNING}Press Enter to see the welcome message...{Color.ENDC}')
     clear_console()
-    print(f'{Color.GREEN} ===============================================================')
-    print(f'|               {Color.HEADER}WELCOME TO COMPILATION OF CODES!                {Color.GREEN}|')
-    print(f'|                                                               |')
-    print(f'|     This program is a compilation of all the codes in         |')
-    print(f'|             {Color.BLUE}Lesson 4 {Color.GREEN}and {Color.BLUE}Lesson 5  {Color.GREEN}in the subject             |')
-    print(f'|                                                               |')
-    print(f'|                    {Color.BLUE}Integrative Programming                    {Color.GREEN}|')
-    print(f' ==============================================================={Color.ENDC}')
+    print(f"    __________________________________   ____________________________________")
+    print(f".-/                                  \\ /                                    |\\-.")
+    print(f"||  ---------------------------------  |  ---------------------------------  ||||")
+    print(f"||   WELCOME TO COMPILATION OF CODES!  |          MEMBERS OF GROUP 3         ||||")
+    print(f"||  ---------------------------------  |  ---------------------------------  ||||")
+    print(f"||                                     |                                     ||||")
+    print(f"||                                     |            Aloveros, Baron          ||||")
+    print(f"||    This program is a compilation    |          Estanislao, Ran-jel        ||||")
+    print(f"||     of all the codes in Lesson 4    |         Marial, Erice Michael       ||||")
+    print(f"||     and Lesson 5 in the subject.    |          Sinday, Ellen Grace        ||||")
+    print(f"||                                     |          Solano, Cedric Mark        ||||")
+    print(f"||                                     |          Vargas, Ashley John        ||||")
+    print(f"||                                     |                                     ||||")
+    print(f"||                                     |                                     ||||")
+    print(f"||       Integrative Programming       |                        (Enter) -->  ||||")
+    print(f"||                                     | ____________________________________||||")
+    print(f"||_____________________________________|/=====================================\\||")
+    print(f"`------------------------------------~___~-------------------------------------'")
     input(f'\n{Color.WARNING}Press Enter to go to the main program...{Color.ENDC}')
 
 
@@ -42,8 +54,8 @@ def display_main_menu():
     clear_console()
     print(f'{Color.GREEN} ======================================')
     print(f'|              {Color.HEADER}Main Menu{Color.GREEN}               |')
-    print(f' ======================================{Color.ENDC}')
-    print(f'|     {Color.BLUE}Lesson 4     {Color.GREEN}|      {Color.BLUE}Lesson 5     {Color.GREEN}|')
+    print(f' ======================================')
+    print(f'|{Color.ENDC}     {Color.BLUE}Lesson 4     {Color.GREEN}|      {Color.BLUE}Lesson 5     {Color.GREEN}|')
     print(f'|       ( {Color.HEADER}A {Color.GREEN})      |       ( {Color.HEADER}B {Color.GREEN})       |')
     print(f'|--------------------------------------|')
     print(f'|            {Color.BLUE}Display Members{Color.GREEN}           |')
@@ -54,6 +66,39 @@ def display_main_menu():
     print(f' ======================================{Color.ENDC}')
 
 
+def display_lesson4_menu():
+    while True:
+        try:
+            clear_console()
+            print(f"    ____________________________________   ____________________________________")
+            print(f".-/|                                    \\ /                                    |\\-.")
+            print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
+            print(f"||||            LESSON 4 CODES           |            LESSON 4 CODES           ||||")
+            print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
+            print(f"||||                                     |                                     ||||")
+            print(f"||||   1. List Manipulation and Slicing  |   5. Factor List Generator:         ||||")
+            print(f"||||   2. Adding, Finding Index, and     |      Create a List of Factors from  ||||")
+            print(f"||||      Removing Items in the List     |      User Input                     ||||")
+            print(f"||||   3. List Methods in Use: Append,   |   6. Removing Repeated Items in     ||||")
+            print(f"||||      Insert, Index, Count, Pop,     |      the List                       ||||")
+            print(f"||||      and Remove                     |   7. Go back to the main menu       ||||")
+            print(f"||||   4. Change Value, Add, Remove,     |                                     ||||")
+            print(f"||||      Sort and Perform Operation in  |                                     ||||")
+            print(f"||||      the List                       |                                     ||||")
+            print(f"||||____________________________________ | ____________________________________||||")
+            print(f"||/=====================================\\|/=====================================\\||")
+            print(f"`--------------------------------------~___~-------------------------------------'")
+            ch = input('Enter choice here: ')
+            choice = int(ch)
+            if choice in range(1, 7):
+                switch_for_lesson4(choice)
+            elif choice == 7:
+                break
+            else:
+                print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
+        except ValueError:
+            print(f'\n{Color.FAIL}Error: Invalid input! Please enter an integer.{Color.ENDC}')
+            input('Press Enter to input again...')
 
 def switch_for_lesson4(choice):
     if choice == 1:
@@ -77,31 +122,38 @@ def switch_for_lesson4(choice):
     else:
         print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid option!{Color.ENDC}')
 
-def display_lesson4_menu():
+def display_lesson5_menu():
     while True:
         try:
             clear_console()
-            print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
-            print(f'|{Color.HEADER}                                LESSON 4 CODES                            {Color.GREEN}|')
-            print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
-            print(f'| {Color.BLUE}1. List Manipulation and Slicing                                         {Color.GREEN}|')
-            print(f'| {Color.BLUE}2. Adding, Finding Index, and Removing Items in the List                 {Color.GREEN}|')
-            print(f'| {Color.BLUE}3. List Methods in Use: Append, Insert, Index, Count, Pop, and Remove    {Color.GREEN}|')
-            print(f'| {Color.BLUE}4. Change Value, Add, Remove, Sort and Perform Operation in the List     {Color.GREEN}|')
-            print(f'| {Color.BLUE}5. Factor List Generator: Create a List of Factors from User Input       {Color.GREEN}|')
-            print(f'| {Color.BLUE}6. Removing Repeated Items in the List                                   {Color.GREEN}|')
-            print(f'| {Color.BLUE}7. Go back to the main menu                                              {Color.GREEN}|')
-            print(f' {Color.GREEN}=========================================================================={Color.ENDC}')
+            print(f"    ____________________________________   ____________________________________")
+            print(f".-/|                                    \\ /                                    |\\-.")
+            print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
+            print(f"||||            LESSON 5 CODES           |            LESSON 5 CODES           ||||")
+            print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
+            print(f"||||                                     |                                     ||||")
+            print(f"||||                                     |                                     ||||")
+            print(f"||||   1. Generate Tuples with Numbers   |                                     ||||")
+            print(f"||||      and Their Squares.             |   4. Manage Products and Price      ||||")
+            print(f"||||   2. Divisible Tuples from Integer  |   5. User Authentication System     ||||")
+            print(f"||||      Tuple List.                    |   6. Go back to the main menu       ||||")
+            print(f"||||   3. Manage Days in Months          |                                     ||||")
+            print(f"||||      and Remove                     |                                     ||||")
+            print(f"||||                                     |                                     ||||")
+            print(f"||||                                     |                                     ||||")
+            print(f"||||____________________________________ | ____________________________________||||")
+            print(f"||/=====================================\\|/=====================================\\||")
+            print(f"`--------------------------------------~___~-------------------------------------''")
             ch = input('Enter choice here: ')
             choice = int(ch)
-            if choice in range(1, 7):
-                switch_for_lesson4(choice)
-            elif choice == 7:
+            if choice in range(1, 6):
+                switch_for_lesson5(choice)
+            elif choice == 6:
                 break
             else:
                 print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
         except ValueError:
-            print('\nError: Invalid input! Please enter an integer.')
+            print('\nError: Invalid input! Please enter an integer...')
             input('Press Enter to input again...')
 
 def switch_for_lesson5(choice):
@@ -123,45 +175,26 @@ def switch_for_lesson5(choice):
     else:
         print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid option!{Color.ENDC}')
 
-def display_lesson5_menu():
-    while True:
-        try:
-            clear_console()
-            print(f' {Color.GREEN}======================================================{Color.ENDC}')
-            print(f'|{Color.HEADER}                    LESSON 5 CODES                    {Color.GREEN}|')
-            print(f' {Color.GREEN}======================================================{Color.ENDC}')
-            print(f'| {Color.BLUE}1. Generate Tuples with Numbers and Their Squares.   {Color.GREEN}|')
-            print(f'| {Color.BLUE}2. Divisible Tuples from Integer Tuple List.         {Color.GREEN}|')
-            print(f'| {Color.BLUE}3. Manage Days in Months                             {Color.GREEN}|')
-            print(f'| {Color.BLUE}4. Manage Products and Prices                        {Color.GREEN}|')
-            print(f'| {Color.BLUE}5. User Authentication System                        {Color.GREEN}|')
-            print(f'| {Color.BLUE}6. Go back to the main menu                          {Color.GREEN}|')
-            print(f' {Color.GREEN}======================================================{Color.ENDC}')
-            ch = input('Enter choice here: ')
-            choice = int(ch)
-            if choice in range(1, 6):
-                switch_for_lesson5(choice)
-            elif choice == 6:
-                break
-            else:
-                print(f'\n{Color.FAIL}Error: Invalid input! Please enter a valid choice...{Color.ENDC}')
-        except ValueError:
-            print('\nError: Invalid input! Please enter an integer...')
-            input('Press Enter to input again...')
-
 def display_members():
     clear_console()
-    print(f'{Color.GREEN} =======================================')
-    print(f'|           {Color.HEADER}MEMBERS OF GROUP 3{Color.GREEN}          |')
-    print(f' ======================================={Color.ENDC}')
-    print(f'{Color.GREEN}╔═══════════════════════════════════════╗{Color.ENDC}')
-    print(f'{Color.GREEN}║ Aloveros, Baron                       ║{Color.ENDC}')
-    print(f'{Color.GREEN}║ Estanislao, Ranjel                    ║{Color.ENDC}')
-    print(f'{Color.GREEN}║ Marial, Erice Michael                 ║{Color.ENDC}')
-    print(f'{Color.GREEN}║ Sinday, Ellen Grace                   ║{Color.ENDC}')
-    print(f'{Color.GREEN}║ Solano, Cedric Mark                   ║{Color.ENDC}')
-    print(f'{Color.GREEN}║ Vargas, Ashley John                   ║{Color.ENDC}')
-    print(f'{Color.GREEN}╚═══════════════════════════════════════╝{Color.ENDC}')
+    print(f"    ____________________________________   ____________________________________")
+    print(f".-/|                                    \\ /                                    |\\-.")
+    print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
+    print(f"||||  ---------------------------------  |          MEMBERS OF GROUP 3         ||||")
+    print(f"||||  ---------------------------------  |  ---------------------------------  ||||")
+    print(f"||||                                     |                                     ||||")
+    print(f"||||                                     |                                     ||||")
+    print(f"||||    -----------------------------    |            Aloveros, Baron          ||||")
+    print(f"||||     ----------------------------    |          Estanislao, Ran-jel        ||||")
+    print(f"||||     ----------------------------    |         Marial, Erice Michael       ||||")
+    print(f"||||                                     |          Sinday, Ellen Grace        ||||")
+    print(f"||||                                     |          Solano, Cedric Mark        ||||")
+    print(f"||||                                     |          Vargas, Ashley John        ||||")
+    print(f"||||                                     |                                     ||||")
+    print(f"||||  <-- (Enter) ----------------       |                                     ||||")
+    print(f"||||____________________________________ | ____________________________________||||")
+    print(f"||/=====================================\\|/=====================================\\||")
+    print(f"`--------------------------------------~___~-------------------------------------'")
     input(f'\n{Color.WARNING}Press Enter to continue...{Color.ENDC}')
 
 
